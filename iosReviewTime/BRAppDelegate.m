@@ -8,16 +8,29 @@
 
 #import "BRAppDelegate.h"
 
-#import "BRViewController.h"
+#import "BRReviewTimeViewController.h"
+#import "BRDeveloperAppsViewController.h"
 
 @implementation BRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[BRViewController alloc] initWithNibName:@"BRViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+
+    BRReviewTimeViewController *reviewTimeViewController = [[BRReviewTimeViewController alloc] initWithNibName:@"BRReviewTimeViewController"
+                                                                                                        bundle:nil];
+    [reviewTimeViewController setTitle:@"Review time"];
+    [reviewTimeViewController.tabBarItem setImage:[UIImage imageNamed:@"clock"]];
+    
+    BRDeveloperAppsViewController *appsViewController = [[BRDeveloperAppsViewController alloc] initWithNibName:@"BRDeveloperAppsViewController"
+                                                                                                        bundle:nil];
+    [appsViewController setTitle:@"App list"];
+    [appsViewController.tabBarItem setImage:[UIImage imageNamed:@"appglobe.png"]];
+
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:[NSArray arrayWithObjects:reviewTimeViewController, appsViewController, nil]];
+    self.window.rootViewController = tabBarController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

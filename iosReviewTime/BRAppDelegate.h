@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class BRViewController;
+@class BRReviewTimeViewController;
 
 @interface BRAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) BRViewController *viewController;
 
 @end

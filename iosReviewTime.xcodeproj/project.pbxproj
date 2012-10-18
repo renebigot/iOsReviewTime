@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7A240821630A969005F5496 /* BRLoginFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */; };
+		A7A240831630A969005F5496 /* BRLoginFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */; };
+		A7A240841630A969005F5496 /* BRRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407F1630A969005F5496 /* BRRestClient.m */; };
+		A7A240851630A969005F5496 /* BRRestClientCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A240811630A969005F5496 /* BRRestClientCredential.m */; };
+		A7E494FC162CA40900F34B63 /* BRDeveloperAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E494FA162CA40900F34B63 /* BRDeveloperAppsViewController.m */; };
+		A7E494FD162CA40900F34B63 /* BRDeveloperAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E494FB162CA40900F34B63 /* BRDeveloperAppsViewController.xib */; };
+		A7E49501162CA76500F34B63 /* BRAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E49500162CA76500F34B63 /* BRAppCell.m */; };
 		A7F4DB92162B632400B98088 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB91162B632400B98088 /* UIKit.framework */; };
 		A7F4DB94162B632400B98088 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB93162B632400B98088 /* Foundation.framework */; };
 		A7F4DB96162B632400B98088 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB95162B632400B98088 /* CoreGraphics.framework */; };
@@ -16,12 +23,31 @@
 		A7F4DBA4162B632400B98088 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBA3162B632400B98088 /* Default.png */; };
 		A7F4DBA6162B632400B98088 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBA5162B632400B98088 /* Default@2x.png */; };
 		A7F4DBA8162B632400B98088 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBA7162B632400B98088 /* Default-568h@2x.png */; };
-		A7F4DBAB162B632400B98088 /* BRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DBAA162B632400B98088 /* BRViewController.m */; };
-		A7F4DBAE162B632400B98088 /* BRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBAC162B632400B98088 /* BRViewController.xib */; };
+		A7F4DBAB162B632400B98088 /* BRReviewTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */; };
+		A7F4DBAE162B632400B98088 /* BRReviewTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBAC162B632400B98088 /* BRReviewTimeViewController.xib */; };
+		A7F4DBBF162BDF8300B98088 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DBBE162BDF8300B98088 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A7F4DBC1162BDF9200B98088 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DBC0162BDF9200B98088 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A7F4DBC8162C614A00B98088 /* BRTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DBC7162C614A00B98088 /* BRTweetCell.m */; };
+		A7F833CF162F024600A0C835 /* appglobe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833CE162F024600A0C835 /* appglobe@2x.png */; };
+		A7F833D1162F025A00A0C835 /* appglobe.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833D0162F025A00A0C835 /* appglobe.png */; };
+		A7F833D4162F02A200A0C835 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833D2162F02A100A0C835 /* clock.png */; };
+		A7F833D5162F02A200A0C835 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833D3162F02A100A0C835 /* clock@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A7F4DB8D162B632400B98088 /* iosReviewTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosReviewTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A2407A1630A969005F5496 /* BRLoginFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLoginFormViewController.h; sourceTree = "<group>"; };
+		A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLoginFormViewController.m; sourceTree = "<group>"; };
+		A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRLoginFormViewController.xib; sourceTree = "<group>"; };
+		A7A2407E1630A969005F5496 /* BRRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRestClient.h; sourceTree = "<group>"; };
+		A7A2407F1630A969005F5496 /* BRRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRestClient.m; sourceTree = "<group>"; };
+		A7A240801630A969005F5496 /* BRRestClientCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRestClientCredential.h; sourceTree = "<group>"; };
+		A7A240811630A969005F5496 /* BRRestClientCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRestClientCredential.m; sourceTree = "<group>"; };
+		A7E494F9162CA40900F34B63 /* BRDeveloperAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDeveloperAppsViewController.h; sourceTree = "<group>"; };
+		A7E494FA162CA40900F34B63 /* BRDeveloperAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDeveloperAppsViewController.m; sourceTree = "<group>"; };
+		A7E494FB162CA40900F34B63 /* BRDeveloperAppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRDeveloperAppsViewController.xib; sourceTree = "<group>"; };
+		A7E494FF162CA76500F34B63 /* BRAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAppCell.h; sourceTree = "<group>"; };
+		A7E49500162CA76500F34B63 /* BRAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAppCell.m; sourceTree = "<group>"; };
+		A7F4DB8D162B632400B98088 /* iOSReviewTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSReviewTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F4DB91162B632400B98088 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7F4DB93162B632400B98088 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7F4DB95162B632400B98088 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -34,9 +60,17 @@
 		A7F4DBA3162B632400B98088 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A7F4DBA5162B632400B98088 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7F4DBA7162B632400B98088 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A7F4DBA9162B632400B98088 /* BRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRViewController.h; sourceTree = "<group>"; };
-		A7F4DBAA162B632400B98088 /* BRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRViewController.m; sourceTree = "<group>"; };
-		A7F4DBAD162B632400B98088 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BRViewController.xib; sourceTree = "<group>"; };
+		A7F4DBA9162B632400B98088 /* BRReviewTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRReviewTimeViewController.h; sourceTree = "<group>"; };
+		A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRReviewTimeViewController.m; sourceTree = "<group>"; };
+		A7F4DBAD162B632400B98088 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BRReviewTimeViewController.xib; sourceTree = "<group>"; };
+		A7F4DBBE162BDF8300B98088 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		A7F4DBC0162BDF9200B98088 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A7F4DBC6162C614A00B98088 /* BRTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTweetCell.h; sourceTree = "<group>"; };
+		A7F4DBC7162C614A00B98088 /* BRTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTweetCell.m; sourceTree = "<group>"; };
+		A7F833CE162F024600A0C835 /* appglobe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appglobe@2x.png"; sourceTree = "<group>"; };
+		A7F833D0162F025A00A0C835 /* appglobe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appglobe.png; sourceTree = "<group>"; };
+		A7F833D2162F02A100A0C835 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		A7F833D3162F02A100A0C835 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F4DBC1162BDF9200B98088 /* Social.framework in Frameworks */,
+				A7F4DBBF162BDF8300B98088 /* Twitter.framework in Frameworks */,
 				A7F4DB92162B632400B98088 /* UIKit.framework in Frameworks */,
 				A7F4DB94162B632400B98088 /* Foundation.framework in Frameworks */,
 				A7F4DB96162B632400B98088 /* CoreGraphics.framework in Frameworks */,
@@ -53,6 +89,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7A24070163059A9005F5496 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7F833D2162F02A100A0C835 /* clock.png */,
+				A7F833D3162F02A100A0C835 /* clock@2x.png */,
+				A7F833CE162F024600A0C835 /* appglobe@2x.png */,
+				A7F833D0162F025A00A0C835 /* appglobe.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A7A24072163059BD005F5496 /* Table view cells */ = {
+			isa = PBXGroup;
+			children = (
+				A7E494FF162CA76500F34B63 /* BRAppCell.h */,
+				A7E49500162CA76500F34B63 /* BRAppCell.m */,
+				A7F4DBC6162C614A00B98088 /* BRTweetCell.h */,
+				A7F4DBC7162C614A00B98088 /* BRTweetCell.m */,
+			);
+			name = "Table view cells";
+			sourceTree = "<group>";
+		};
+		A7A24073163059CE005F5496 /* ReviewTime */ = {
+			isa = PBXGroup;
+			children = (
+				A7F4DBA9162B632400B98088 /* BRReviewTimeViewController.h */,
+				A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */,
+				A7F4DBAC162B632400B98088 /* BRReviewTimeViewController.xib */,
+			);
+			name = ReviewTime;
+			sourceTree = "<group>";
+		};
+		A7A2407616305A00005F5496 /* iTunesConnect */ = {
+			isa = PBXGroup;
+			children = (
+				A7E494F9162CA40900F34B63 /* BRDeveloperAppsViewController.h */,
+				A7E494FA162CA40900F34B63 /* BRDeveloperAppsViewController.m */,
+				A7E494FB162CA40900F34B63 /* BRDeveloperAppsViewController.xib */,
+			);
+			name = iTunesConnect;
+			sourceTree = "<group>";
+		};
+		A7A2407716305A1B005F5496 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				A7A240791630A969005F5496 /* BRLoginForm */,
+				A7A2407D1630A969005F5496 /* BRRestClient */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		A7A2407816305A35005F5496 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A7F4DBA0162B632400B98088 /* BRAppDelegate.h */,
+				A7F4DBA1162B632400B98088 /* BRAppDelegate.m */,
+				A7A24073163059CE005F5496 /* ReviewTime */,
+				A7A2407616305A00005F5496 /* iTunesConnect */,
+				A7A24072163059BD005F5496 /* Table view cells */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		A7A240791630A969005F5496 /* BRLoginForm */ = {
+			isa = PBXGroup;
+			children = (
+				A7A2407A1630A969005F5496 /* BRLoginFormViewController.h */,
+				A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */,
+				A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */,
+			);
+			name = BRLoginForm;
+			path = libs/BRLoginForm;
+			sourceTree = "<group>";
+		};
+		A7A2407D1630A969005F5496 /* BRRestClient */ = {
+			isa = PBXGroup;
+			children = (
+				A7A2407E1630A969005F5496 /* BRRestClient.h */,
+				A7A2407F1630A969005F5496 /* BRRestClient.m */,
+				A7A240801630A969005F5496 /* BRRestClientCredential.h */,
+				A7A240811630A969005F5496 /* BRRestClientCredential.m */,
+			);
+			name = BRRestClient;
+			path = libs/BRRestClient;
+			sourceTree = "<group>";
+		};
 		A7F4DB82162B632400B98088 = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +187,7 @@
 		A7F4DB8E162B632400B98088 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7F4DB8D162B632400B98088 /* iosReviewTime.app */,
+				A7F4DB8D162B632400B98088 /* iOSReviewTime.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +195,8 @@
 		A7F4DB90162B632400B98088 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7F4DBC0162BDF9200B98088 /* Social.framework */,
+				A7F4DBBE162BDF8300B98088 /* Twitter.framework */,
 				A7F4DB91162B632400B98088 /* UIKit.framework */,
 				A7F4DB93162B632400B98088 /* Foundation.framework */,
 				A7F4DB95162B632400B98088 /* CoreGraphics.framework */,
@@ -83,11 +207,9 @@
 		A7F4DB97162B632400B98088 /* iosReviewTime */ = {
 			isa = PBXGroup;
 			children = (
-				A7F4DBA0162B632400B98088 /* BRAppDelegate.h */,
-				A7F4DBA1162B632400B98088 /* BRAppDelegate.m */,
-				A7F4DBA9162B632400B98088 /* BRViewController.h */,
-				A7F4DBAA162B632400B98088 /* BRViewController.m */,
-				A7F4DBAC162B632400B98088 /* BRViewController.xib */,
+				A7A2407716305A1B005F5496 /* Libs */,
+				A7A2407816305A35005F5496 /* Sources */,
+				A7A24070163059A9005F5496 /* Resources */,
 				A7F4DB98162B632400B98088 /* Supporting Files */,
 			);
 			path = iosReviewTime;
@@ -110,9 +232,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A7F4DB8C162B632400B98088 /* iosReviewTime */ = {
+		A7F4DB8C162B632400B98088 /* iOSReviewTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7F4DBB1162B632400B98088 /* Build configuration list for PBXNativeTarget "iosReviewTime" */;
+			buildConfigurationList = A7F4DBB1162B632400B98088 /* Build configuration list for PBXNativeTarget "iOSReviewTime" */;
 			buildPhases = (
 				A7F4DB89162B632400B98088 /* Sources */,
 				A7F4DB8A162B632400B98088 /* Frameworks */,
@@ -122,9 +244,9 @@
 			);
 			dependencies = (
 			);
-			name = iosReviewTime;
+			name = iOSReviewTime;
 			productName = iosReviewTime;
-			productReference = A7F4DB8D162B632400B98088 /* iosReviewTime.app */;
+			productReference = A7F4DB8D162B632400B98088 /* iOSReviewTime.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +271,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7F4DB8C162B632400B98088 /* iosReviewTime */,
+				A7F4DB8C162B632400B98088 /* iOSReviewTime */,
 			);
 		};
 /* End PBXProject section */
@@ -163,7 +285,13 @@
 				A7F4DBA4162B632400B98088 /* Default.png in Resources */,
 				A7F4DBA6162B632400B98088 /* Default@2x.png in Resources */,
 				A7F4DBA8162B632400B98088 /* Default-568h@2x.png in Resources */,
-				A7F4DBAE162B632400B98088 /* BRViewController.xib in Resources */,
+				A7F4DBAE162B632400B98088 /* BRReviewTimeViewController.xib in Resources */,
+				A7E494FD162CA40900F34B63 /* BRDeveloperAppsViewController.xib in Resources */,
+				A7F833CF162F024600A0C835 /* appglobe@2x.png in Resources */,
+				A7F833D1162F025A00A0C835 /* appglobe.png in Resources */,
+				A7F833D4162F02A200A0C835 /* clock.png in Resources */,
+				A7F833D5162F02A200A0C835 /* clock@2x.png in Resources */,
+				A7A240831630A969005F5496 /* BRLoginFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +304,13 @@
 			files = (
 				A7F4DB9E162B632400B98088 /* main.m in Sources */,
 				A7F4DBA2162B632400B98088 /* BRAppDelegate.m in Sources */,
-				A7F4DBAB162B632400B98088 /* BRViewController.m in Sources */,
+				A7F4DBAB162B632400B98088 /* BRReviewTimeViewController.m in Sources */,
+				A7F4DBC8162C614A00B98088 /* BRTweetCell.m in Sources */,
+				A7E494FC162CA40900F34B63 /* BRDeveloperAppsViewController.m in Sources */,
+				A7E49501162CA76500F34B63 /* BRAppCell.m in Sources */,
+				A7A240821630A969005F5496 /* BRLoginFormViewController.m in Sources */,
+				A7A240841630A969005F5496 /* BRRestClient.m in Sources */,
+				A7A240851630A969005F5496 /* BRRestClientCredential.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,12 +325,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A7F4DBAC162B632400B98088 /* BRViewController.xib */ = {
+		A7F4DBAC162B632400B98088 /* BRReviewTimeViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A7F4DBAD162B632400B98088 /* en */,
 			);
-			name = BRViewController.xib;
+			name = BRReviewTimeViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,13 +419,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7F4DBB1162B632400B98088 /* Build configuration list for PBXNativeTarget "iosReviewTime" */ = {
+		A7F4DBB1162B632400B98088 /* Build configuration list for PBXNativeTarget "iOSReviewTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7F4DBB2162B632400B98088 /* Debug */,
 				A7F4DBB3162B632400B98088 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
