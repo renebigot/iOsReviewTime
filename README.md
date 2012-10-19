@@ -8,14 +8,14 @@ Connect to iTunesConnect to retrieve your apps list and tweet about your app rev
 
 #Screen shots
 
-Review time + tweets view
-![Twitter](https://github.com/renebigot/iOsReviewTime/raw/master/reviewTime.png)
+Review time + tweets view  
+![Twitter](https://github.com/renebigot/iOsReviewTime/raw/master/reviewTime.png)  
 
-iTunesConnect view
-![iTunesConnect](https://github.com/renebigot/iOsReviewTime/raw/master/itcView.png)
+iTunesConnect view  
+![iTunesConnect](https://github.com/renebigot/iOsReviewTime/raw/master/itcView.png)  
 
-iTunesConnect login
-![Login page](https://github.com/renebigot/iOsReviewTime/raw/master/itcLogin.png)
+iTunesConnect login  
+![Login page](https://github.com/renebigot/iOsReviewTime/raw/master/itcLogin.png)  
 
 #Compatibility
 
