@@ -31,6 +31,8 @@
     [tabBarController setViewControllers:[NSArray arrayWithObjects:reviewTimeViewController, appsViewController, nil]];
     self.window.rootViewController = tabBarController;
     
+    [application setStatusBarStyle:UIStatusBarStyleDefault];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

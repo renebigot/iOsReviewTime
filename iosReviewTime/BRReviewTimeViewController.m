@@ -110,10 +110,6 @@
     [self refreshTweets:nil];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-}
-
 #pragma mark - UITableView delegate & data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

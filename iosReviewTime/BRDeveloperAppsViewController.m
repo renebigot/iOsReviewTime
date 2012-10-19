@@ -94,7 +94,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 
     [self refreshApps:nil];
 }
@@ -107,7 +106,7 @@
     __weak BRLoginFormViewController *loginForm = loginForm_;
     
     [loginForm setLoginFormTitle:@"iTunesConnect login"];
-    [loginForm setLoginFormFooterNote:@"Use you're iTunesConnect username and password to retrieve your app list"];
+    [loginForm setLoginFormFooterNote:@"Use your iTunesConnect username and password to retrieve your app list"];
     [loginForm setCompletionBlock:^{
         _itcUsername = [BRLoginFormViewController username];
         _itcPassword = [BRLoginFormViewController password];

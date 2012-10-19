@@ -125,7 +125,7 @@
 					<object class="IBUINavigationBar" id="488432495">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">290</int>
-						<string key="NSFrame">{{1, 0}, {320, 44}}</string>
+						<string key="NSFrameSize">{321, 44}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="693810678"/>
