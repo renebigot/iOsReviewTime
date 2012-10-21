@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A762611F16348C68001149A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A762611E16348C68001149A4 /* Cocoa.framework */; };
+		A762612916348C68001149A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A762612716348C68001149A4 /* InfoPlist.strings */; };
+		A762612B16348C68001149A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A762612A16348C68001149A4 /* main.m */; };
+		A762612F16348C68001149A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A762612D16348C68001149A4 /* Credits.rtf */; };
+		A762613216348C68001149A4 /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A762613116348C68001149A4 /* BRAppDelegate.m */; };
+		A762613516348C68001149A4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A762613316348C68001149A4 /* MainMenu.xib */; };
+		A762613A16348E0F001149A4 /* BRRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407F1630A969005F5496 /* BRRestClient.m */; };
+		A762613B16348E0F001149A4 /* BRRestClientCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A240811630A969005F5496 /* BRRestClientCredential.m */; };
 		A7A240821630A969005F5496 /* BRLoginFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */; };
 		A7A240831630A969005F5496 /* BRLoginFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */; };
 		A7A240841630A969005F5496 /* BRRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407F1630A969005F5496 /* BRRestClient.m */; };
@@ -35,6 +43,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A762611C16348C68001149A4 /* iRT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A762611E16348C68001149A4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		A762612116348C68001149A4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A762612216348C68001149A4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A762612316348C68001149A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A762612616348C68001149A4 /* iRT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRT-Info.plist"; sourceTree = "<group>"; };
+		A762612816348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A762612A16348C68001149A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A762612C16348C68001149A4 /* iRT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRT-Prefix.pch"; sourceTree = "<group>"; };
+		A762612E16348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A762613016348C68001149A4 /* BRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRAppDelegate.h; sourceTree = "<group>"; };
+		A762613116348C68001149A4 /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
+		A762613416348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A7A2407A1630A969005F5496 /* BRLoginFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLoginFormViewController.h; sourceTree = "<group>"; };
 		A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLoginFormViewController.m; sourceTree = "<group>"; };
 		A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRLoginFormViewController.xib; sourceTree = "<group>"; };
@@ -74,6 +95,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A762611916348C68001149A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A762611F16348C68001149A4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7F4DB8A162B632400B98088 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +118,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A762612016348C68001149A4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A762612116348C68001149A4 /* AppKit.framework */,
+				A762612216348C68001149A4 /* CoreData.framework */,
+				A762612316348C68001149A4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A762612416348C68001149A4 /* iRT */ = {
+			isa = PBXGroup;
+			children = (
+				A762613016348C68001149A4 /* BRAppDelegate.h */,
+				A762613116348C68001149A4 /* BRAppDelegate.m */,
+				A762613316348C68001149A4 /* MainMenu.xib */,
+				A762612516348C68001149A4 /* Supporting Files */,
+			);
+			path = iRT;
+			sourceTree = "<group>";
+		};
+		A762612516348C68001149A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A762612616348C68001149A4 /* iRT-Info.plist */,
+				A762612716348C68001149A4 /* InfoPlist.strings */,
+				A762612A16348C68001149A4 /* main.m */,
+				A762612C16348C68001149A4 /* iRT-Prefix.pch */,
+				A762612D16348C68001149A4 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A7A24070163059A9005F5496 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				A7F4DB97162B632400B98088 /* iosReviewTime */,
+				A762612416348C68001149A4 /* iRT */,
 				A7F4DB90162B632400B98088 /* Frameworks */,
 				A7F4DB8E162B632400B98088 /* Products */,
 			);
@@ -188,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				A7F4DB8D162B632400B98088 /* iOSReviewTime.app */,
+				A762611C16348C68001149A4 /* iRT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +264,8 @@
 				A7F4DB91162B632400B98088 /* UIKit.framework */,
 				A7F4DB93162B632400B98088 /* Foundation.framework */,
 				A7F4DB95162B632400B98088 /* CoreGraphics.framework */,
+				A762611E16348C68001149A4 /* Cocoa.framework */,
+				A762612016348C68001149A4 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +298,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A762611B16348C68001149A4 /* iRT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A762613816348C68001149A4 /* Build configuration list for PBXNativeTarget "iRT" */;
+			buildPhases = (
+				A762611816348C68001149A4 /* Sources */,
+				A762611916348C68001149A4 /* Frameworks */,
+				A762611A16348C68001149A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRT;
+			productName = iRT;
+			productReference = A762611C16348C68001149A4 /* iRT.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A7F4DB8C162B632400B98088 /* iOSReviewTime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7F4DBB1162B632400B98088 /* Build configuration list for PBXNativeTarget "iOSReviewTime" */;
@@ -272,11 +355,22 @@
 			projectRoot = "";
 			targets = (
 				A7F4DB8C162B632400B98088 /* iOSReviewTime */,
+				A762611B16348C68001149A4 /* iRT */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A762611A16348C68001149A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A762612916348C68001149A4 /* InfoPlist.strings in Resources */,
+				A762612F16348C68001149A4 /* Credits.rtf in Resources */,
+				A762613516348C68001149A4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7F4DB8B162B632400B98088 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +392,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A762611816348C68001149A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A762612B16348C68001149A4 /* main.m in Sources */,
+				A762613216348C68001149A4 /* BRAppDelegate.m in Sources */,
+				A762613A16348E0F001149A4 /* BRRestClient.m in Sources */,
+				A762613B16348E0F001149A4 /* BRRestClientCredential.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7F4DB89162B632400B98088 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +422,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A762612716348C68001149A4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A762612816348C68001149A4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A762612D16348C68001149A4 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A762612E16348C68001149A4 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		A762613316348C68001149A4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A762613416348C68001149A4 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		A7F4DB9A162B632400B98088 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,6 +465,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A762613616348C68001149A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRT/iRT-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "iRT/iRT-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A762613716348C68001149A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRT/iRT-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "iRT/iRT-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		A7F4DBAF162B632400B98088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -410,6 +583,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A762613816348C68001149A4 /* Build configuration list for PBXNativeTarget "iRT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A762613616348C68001149A4 /* Debug */,
+				A762613716348C68001149A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A7F4DB87162B632400B98088 /* Build configuration list for PBXProject "iosReviewTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -55,11 +55,13 @@
         _error = [NSError errorWithDomain:@"BRRestClient HTTP Error" code:_status userInfo:errorDict];
 
         if (!self.hideError) {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
             [[[UIAlertView alloc] initWithTitle:[_error localizedDescription]
                                         message:[[_error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]
                                        delegate:nil
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
+#endif
         }
     }
 }
@@ -102,17 +104,23 @@
         _error = [NSError errorWithDomain:@"BRRestClient HTTP Error" code:_status userInfo:errorDict];
         
         if (!self.hideError) {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
             [[[UIAlertView alloc] initWithTitle:[_error localizedDescription]
                                         message:[[_error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]
                                        delegate:nil
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
+#endif
         }
     }
 }
 
 - (NSString *)statusCode {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
     return [NSString stringWithFormat:@"%d", _status];
+#else
+    return [NSString stringWithFormat:@"%ld", _status];
+#endif
 }
 
 - (NSData *)rawServerResponse {
@@ -157,11 +165,13 @@
             _error = [NSError errorWithDomain:@"BRRestClient HTTP Error" code:_status userInfo:errorDict];
 
             if (!self.hideError) {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
                 [[[UIAlertView alloc] initWithTitle:[_error localizedDescription]
                                             message:[[_error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]
                                            delegate:nil
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil] show];
+#endif
             }
         }
     }
@@ -179,16 +189,22 @@
     
     _error = error;
     if (!self.hideError) {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
         [[[UIAlertView alloc] initWithTitle:[error localizedDescription]
                                     message:[[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]
                                    delegate:nil
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
+#endif
     }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
     NSLog(@"Succeeded! Received %d bytes of data",[_receivedData length]);
+#else
+    NSLog(@"Succeeded! Received %ld bytes of data",[_receivedData length]);
+#endif
     
     connection = nil;
     _readCompletionBlock();
