@@ -21,6 +21,8 @@ iTunesConnect login
 
 Needs iOS 5 or 6. Compatible from iPhone 3GS to iPhone 5. No iPad version for the moment.
 
+Light version for OS X: show review time in OS X status bar.
+
 #License
 
 BSD License
