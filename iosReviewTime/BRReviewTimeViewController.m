@@ -42,7 +42,7 @@
 
     NSDate *yesterday = [[NSDate date] dateByAddingTimeInterval:-24 * 60 * 60];
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"([0-9]*) days"
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"([0-9]*) day"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
 
