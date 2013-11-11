@@ -1,28 +1,19 @@
-#An app for iOS review time
+#Track AppStore Review Times
+iOS Review Time will connect to Twitter to fetch review times from developer posting on twitter  [#iosreviewtime](https://twitter.com/search?q=%23iosreviewtime). This is an original idea from [shinydevelopment](http://reviewtimes.shinydevelopment.com/)
 
-iOSReviewTime will connect to Twitter to fetch reviews times from developer posting on twitter [ #iosreviewtime](https://twitter.com/search?q=%23iosreviewtime). This is an original idea from [shinydevelopment](http://reviewtimes.shinydevelopment.com/)
-
-#An app to share your review time
-
+#Share AppStore Review Times
 Connect to iTunesConnect to retrieve your apps list and tweet about your app review time.
 
-#Screen shots
+#Screenshots
+Review time and twitter feed view
+![Twitter](https://github.com/iRareMedia/iOsReviewTime/raw/master/reviewTime.png)  
 
-Review time + tweets view  
-![Twitter](https://github.com/renebigot/iOsReviewTime/raw/master/reviewTime.png)  
-
-iTunesConnect view  
-![iTunesConnect](https://github.com/renebigot/iOsReviewTime/raw/master/itcView.png)  
-
-iTunesConnect login  
+iTunesConnect view and login
+![iTunesConnect](https://github.com/renebigot/iOsReviewTime/raw/master/itcView.png)
 ![Login page](https://github.com/renebigot/iOsReviewTime/raw/master/itcLogin.png)  
 
 #Compatibility
-
-Needs iOS 5 or 6. Compatible from iPhone 3GS to iPhone 5. No iPad version for the moment.
-
-Light version for OS X: show review time in OS X status bar.
+Works on iOS 6.0+ and iOS 7.0+. Compatible with iPhone, no iPad version for the moment. Light edition for OS X: show review time in OS X status bar.
 
 #License
-
 BSD License
