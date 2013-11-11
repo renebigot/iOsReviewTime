@@ -6,14 +6,13 @@ Connect to iTunesConnect to retrieve your apps list and tweet about your app rev
 
 #Screenshots
 Review time and twitter feed view
-![Twitter](https://github.com/iRareMedia/iOsReviewTime/raw/master/reviewTime.png)  
-
-iTunesConnect view and login
-![iTunesConnect](https://github.com/renebigot/iOsReviewTime/raw/master/itcView.png)
-![Login page](https://github.com/renebigot/iOsReviewTime/raw/master/itcLogin.png)  
+![Review Feed](https://github.com/iRareMedia/iOsReviewTime/raw/master/reviewTime.png) 
 
 #Compatibility
 Works on iOS 6.0+ and iOS 7.0+. Compatible with iPhone, no iPad version for the moment. Light edition for OS X: show review time in OS X status bar.
+
+#Updates
+Work in progress, star for updates and information. Stay tuned for more!
 
 #License
 BSD License
