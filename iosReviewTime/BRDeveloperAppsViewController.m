@@ -98,11 +98,15 @@
     [self refreshApps:nil];
 }
 
+- (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
+    return UIBarPositionTopAttached;
+}
+
 #pragma mark - IBActions
 
 - (IBAction)login:(id)sender {
-    BRLoginFormViewController *loginForm_ = [[BRLoginFormViewController alloc] initWithNibName:@"BRLoginFormViewController"
-                                                                                        bundle:nil];
+//    BRLoginFormViewController *loginForm_ = [[BRLoginFormViewController alloc] initWithNibName:@"BRLoginFormViewController" bundle:nil];
+    BRLoginFormViewController *loginForm_ = [[BRLoginFormViewController alloc] init];
     __weak BRLoginFormViewController *loginForm = loginForm_;
     
     [loginForm setLoginFormTitle:@"iTunesConnect login"];
@@ -122,12 +126,14 @@
         [self refreshApps:nil];
     }];
     
-    if ([loginForm respondsToSelector:@selector(presentViewController:animated:completion:)]) {
-        [self presentViewController:loginForm animated:YES completion:NULL];
+    if ([loginForm respondsToSelector:@selector(performSegueWithIdentifier:sender:)]) {
+        //[self presentViewController:loginForm animated:YES completion:NULL];
+        [self performSegueWithIdentifier:@"login" sender:self];
     } else {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        [self presentModalViewController:loginForm animated:YES];
+        [self performSegueWithIdentifier:@"login" sender:self];
+        //[self presentModalViewController:loginForm animated:YES];
 #pragma clang diagnostic pop
     }
 }
@@ -208,10 +214,10 @@
                 [manageAppScanner scanUpToString:@"</b>" intoString:&devName];
                 _developerName = devName;
                 
-                [manageAppScanner scanUpToString:@"alt=\"Manage Your Applications\"" intoString:nil];
-                if (![manageAppScanner scanString:@"alt=\"Manage Your Applications\"" intoString:nil]) {
+                [manageAppScanner scanUpToString:@"alt=\"Manage Your Apps\"" intoString:nil];
+                if (![manageAppScanner scanString:@"alt=\"Manage Your Apps\"" intoString:nil]) {
                     [[[UIAlertView alloc] initWithTitle:@"Error in page"
-                                                message:@"Can't find the \"Manage your applications\" link"
+                                                message:@"Can't find the \"Manage Your Apps\" link"
                                                delegate:nil
                                       cancelButtonTitle:@"OK"
                                       otherButtonTitles:nil] show];
@@ -223,7 +229,7 @@
                 [manageAppScanner scanString:@"href=\"" intoString:nil];
                 [manageAppScanner scanUpToString:@"\"" intoString:&manageApplicationLink];
                 
-                NSLog(@"Manage your applications link: %@", manageApplicationLink);
+                NSLog(@"Manage your apps link: %@", manageApplicationLink);
                 [restClient read:manageApplicationLink
              withCompletionBlock:^{
                  NSString *serverResponse = [restClient serverResponse];
@@ -265,7 +271,7 @@
     return 61.;
 }
 
-- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_tableViewCells count];
 }
 

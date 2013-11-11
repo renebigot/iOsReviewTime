@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRDeveloperAppsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate> {
+@interface BRDeveloperAppsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIBarPositioningDelegate> {
     NSString *_developerName;
     NSMutableArray *_tableViewCells;
     

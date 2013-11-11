@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A762611F16348C68001149A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A762611E16348C68001149A4 /* Cocoa.framework */; };
+		99B5EB521831423E00A7FA50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B5EB511831423E00A7FA50 /* Images.xcassets */; };
+		99B5EB561831429D00A7FA50 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB551831429D00A7FA50 /* Cocoa.framework */; };
+		99B5EB58183142E500A7FA50 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B5EB57183142E500A7FA50 /* Storyboard.storyboard */; };
+		99B5EB5B1831454400A7FA50 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB591831453900A7FA50 /* AppKit.framework */; };
+		99B5EB5D1831455000A7FA50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB5C1831455000A7FA50 /* CoreData.framework */; };
+		99B5EB5F1831455600A7FA50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB5E1831455600A7FA50 /* Foundation.framework */; };
+		99B5EB7F1831622A00A7FA50 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB7E1831622A00A7FA50 /* CFNetwork.framework */; };
+		99B5EB8118316AC300A7FA50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB8018316AC300A7FA50 /* SystemConfiguration.framework */; };
+		99B5EB8318316AC900A7FA50 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB8218316AC900A7FA50 /* MobileCoreServices.framework */; };
+		99B5EB8518316AF500A7FA50 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB8418316AF500A7FA50 /* Security.framework */; };
+		99B5EBA11831811C00A7FA50 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EBA01831811C00A7FA50 /* Accounts.framework */; };
 		A762612916348C68001149A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A762612716348C68001149A4 /* InfoPlist.strings */; };
 		A762612B16348C68001149A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A762612A16348C68001149A4 /* main.m */; };
 		A762612F16348C68001149A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A762612D16348C68001149A4 /* Credits.rtf */; };
@@ -16,11 +26,9 @@
 		A762613A16348E0F001149A4 /* BRRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407F1630A969005F5496 /* BRRestClient.m */; };
 		A762613B16348E0F001149A4 /* BRRestClientCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A240811630A969005F5496 /* BRRestClientCredential.m */; };
 		A7A240821630A969005F5496 /* BRLoginFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */; };
-		A7A240831630A969005F5496 /* BRLoginFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */; };
 		A7A240841630A969005F5496 /* BRRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A2407F1630A969005F5496 /* BRRestClient.m */; };
 		A7A240851630A969005F5496 /* BRRestClientCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A240811630A969005F5496 /* BRRestClientCredential.m */; };
 		A7E494FC162CA40900F34B63 /* BRDeveloperAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E494FA162CA40900F34B63 /* BRDeveloperAppsViewController.m */; };
-		A7E494FD162CA40900F34B63 /* BRDeveloperAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E494FB162CA40900F34B63 /* BRDeveloperAppsViewController.xib */; };
 		A7E49501162CA76500F34B63 /* BRAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E49500162CA76500F34B63 /* BRAppCell.m */; };
 		A7F4DB92162B632400B98088 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB91162B632400B98088 /* UIKit.framework */; };
 		A7F4DB94162B632400B98088 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB93162B632400B98088 /* Foundation.framework */; };
@@ -28,26 +36,26 @@
 		A7F4DB9C162B632400B98088 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DB9A162B632400B98088 /* InfoPlist.strings */; };
 		A7F4DB9E162B632400B98088 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DB9D162B632400B98088 /* main.m */; };
 		A7F4DBA2162B632400B98088 /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DBA1162B632400B98088 /* BRAppDelegate.m */; };
-		A7F4DBA4162B632400B98088 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBA3162B632400B98088 /* Default.png */; };
-		A7F4DBA6162B632400B98088 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBA5162B632400B98088 /* Default@2x.png */; };
-		A7F4DBA8162B632400B98088 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBA7162B632400B98088 /* Default-568h@2x.png */; };
 		A7F4DBAB162B632400B98088 /* BRReviewTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */; };
-		A7F4DBAE162B632400B98088 /* BRReviewTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F4DBAC162B632400B98088 /* BRReviewTimeViewController.xib */; };
 		A7F4DBBF162BDF8300B98088 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DBBE162BDF8300B98088 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7F4DBC1162BDF9200B98088 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DBC0162BDF9200B98088 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7F4DBC8162C614A00B98088 /* BRTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DBC7162C614A00B98088 /* BRTweetCell.m */; };
-		A7F833CF162F024600A0C835 /* appglobe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833CE162F024600A0C835 /* appglobe@2x.png */; };
-		A7F833D1162F025A00A0C835 /* appglobe.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833D0162F025A00A0C835 /* appglobe.png */; };
-		A7F833D4162F02A200A0C835 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833D2162F02A100A0C835 /* clock.png */; };
-		A7F833D5162F02A200A0C835 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7F833D3162F02A100A0C835 /* clock@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99B5EB511831423E00A7FA50 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iOSReviewTime/Images.xcassets; sourceTree = "<group>"; };
+		99B5EB551831429D00A7FA50 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		99B5EB57183142E500A7FA50 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		99B5EB591831453900A7FA50 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		99B5EB5C1831455000A7FA50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		99B5EB5E1831455600A7FA50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		99B5EB7E1831622A00A7FA50 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		99B5EB8018316AC300A7FA50 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		99B5EB8218316AC900A7FA50 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		99B5EB8418316AF500A7FA50 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		99B5EB8E1831776D00A7FA50 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		99B5EBA01831811C00A7FA50 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A762611C16348C68001149A4 /* iRT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A762611E16348C68001149A4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		A762612116348C68001149A4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		A762612216348C68001149A4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A762612316348C68001149A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A762612616348C68001149A4 /* iRT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRT-Info.plist"; sourceTree = "<group>"; };
 		A762612816348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A762612A16348C68001149A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,40 +66,30 @@
 		A762613416348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A7A2407A1630A969005F5496 /* BRLoginFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLoginFormViewController.h; sourceTree = "<group>"; };
 		A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLoginFormViewController.m; sourceTree = "<group>"; };
-		A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRLoginFormViewController.xib; sourceTree = "<group>"; };
 		A7A2407E1630A969005F5496 /* BRRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRestClient.h; sourceTree = "<group>"; };
 		A7A2407F1630A969005F5496 /* BRRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRestClient.m; sourceTree = "<group>"; };
 		A7A240801630A969005F5496 /* BRRestClientCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRestClientCredential.h; sourceTree = "<group>"; };
 		A7A240811630A969005F5496 /* BRRestClientCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRestClientCredential.m; sourceTree = "<group>"; };
 		A7E494F9162CA40900F34B63 /* BRDeveloperAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDeveloperAppsViewController.h; sourceTree = "<group>"; };
 		A7E494FA162CA40900F34B63 /* BRDeveloperAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDeveloperAppsViewController.m; sourceTree = "<group>"; };
-		A7E494FB162CA40900F34B63 /* BRDeveloperAppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRDeveloperAppsViewController.xib; sourceTree = "<group>"; };
 		A7E494FF162CA76500F34B63 /* BRAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAppCell.h; sourceTree = "<group>"; };
 		A7E49500162CA76500F34B63 /* BRAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAppCell.m; sourceTree = "<group>"; };
 		A7F4DB8D162B632400B98088 /* iOSReviewTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSReviewTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F4DB91162B632400B98088 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7F4DB93162B632400B98088 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7F4DB95162B632400B98088 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A7F4DB99162B632400B98088 /* iosReviewTime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iosReviewTime-Info.plist"; sourceTree = "<group>"; };
+		A7F4DB99162B632400B98088 /* iOS Review Time-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS Review Time-Info.plist"; sourceTree = "<group>"; };
 		A7F4DB9B162B632400B98088 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7F4DB9D162B632400B98088 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A7F4DB9F162B632400B98088 /* iosReviewTime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosReviewTime-Prefix.pch"; sourceTree = "<group>"; };
+		A7F4DB9F162B632400B98088 /* iOS Review Time-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS Review Time-Prefix.pch"; sourceTree = "<group>"; };
 		A7F4DBA0162B632400B98088 /* BRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRAppDelegate.h; sourceTree = "<group>"; };
 		A7F4DBA1162B632400B98088 /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
-		A7F4DBA3162B632400B98088 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A7F4DBA5162B632400B98088 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A7F4DBA7162B632400B98088 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A7F4DBA9162B632400B98088 /* BRReviewTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRReviewTimeViewController.h; sourceTree = "<group>"; };
 		A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRReviewTimeViewController.m; sourceTree = "<group>"; };
-		A7F4DBAD162B632400B98088 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BRReviewTimeViewController.xib; sourceTree = "<group>"; };
 		A7F4DBBE162BDF8300B98088 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		A7F4DBC0162BDF9200B98088 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A7F4DBC6162C614A00B98088 /* BRTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTweetCell.h; sourceTree = "<group>"; };
 		A7F4DBC7162C614A00B98088 /* BRTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTweetCell.m; sourceTree = "<group>"; };
-		A7F833CE162F024600A0C835 /* appglobe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appglobe@2x.png"; sourceTree = "<group>"; };
-		A7F833D0162F025A00A0C835 /* appglobe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appglobe.png; sourceTree = "<group>"; };
-		A7F833D2162F02A100A0C835 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
-		A7F833D3162F02A100A0C835 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A762611F16348C68001149A4 /* Cocoa.framework in Frameworks */,
+				99B5EB5F1831455600A7FA50 /* Foundation.framework in Frameworks */,
+				99B5EB5D1831455000A7FA50 /* CoreData.framework in Frameworks */,
+				99B5EB5B1831454400A7FA50 /* AppKit.framework in Frameworks */,
+				99B5EB561831429D00A7FA50 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +108,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B5EBA11831811C00A7FA50 /* Accounts.framework in Frameworks */,
+				99B5EB8518316AF500A7FA50 /* Security.framework in Frameworks */,
+				99B5EB8318316AC900A7FA50 /* MobileCoreServices.framework in Frameworks */,
+				99B5EB8118316AC300A7FA50 /* SystemConfiguration.framework in Frameworks */,
+				99B5EB7F1831622A00A7FA50 /* CFNetwork.framework in Frameworks */,
 				A7F4DBC1162BDF9200B98088 /* Social.framework in Frameworks */,
 				A7F4DBBF162BDF8300B98088 /* Twitter.framework in Frameworks */,
 				A7F4DB92162B632400B98088 /* UIKit.framework in Frameworks */,
@@ -118,17 +124,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99B5EB601831510700A7FA50 /* BRLogin */ = {
+			isa = PBXGroup;
+			children = (
+				A7A240791630A969005F5496 /* BRLoginForm */,
+				A7A2407D1630A969005F5496 /* BRRestClient */,
+			);
+			name = BRLogin;
+			sourceTree = "<group>";
+		};
 		A762612016348C68001149A4 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A762612116348C68001149A4 /* AppKit.framework */,
-				A762612216348C68001149A4 /* CoreData.framework */,
-				A762612316348C68001149A4 /* Foundation.framework */,
+				99B5EB5E1831455600A7FA50 /* Foundation.framework */,
+				99B5EB5C1831455000A7FA50 /* CoreData.framework */,
+				99B5EB591831453900A7FA50 /* AppKit.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		A762612416348C68001149A4 /* iRT */ = {
+		A762612416348C68001149A4 /* iOS Review Time - Mac */ = {
 			isa = PBXGroup;
 			children = (
 				A762613016348C68001149A4 /* BRAppDelegate.h */,
@@ -136,6 +151,7 @@
 				A762613316348C68001149A4 /* MainMenu.xib */,
 				A762612516348C68001149A4 /* Supporting Files */,
 			);
+			name = "iOS Review Time - Mac";
 			path = iRT;
 			sourceTree = "<group>";
 		};
@@ -151,17 +167,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A7A24070163059A9005F5496 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A7F833D2162F02A100A0C835 /* clock.png */,
-				A7F833D3162F02A100A0C835 /* clock@2x.png */,
-				A7F833CE162F024600A0C835 /* appglobe@2x.png */,
-				A7F833D0162F025A00A0C835 /* appglobe.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		A7A24072163059BD005F5496 /* Table view cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,53 +178,11 @@
 			name = "Table view cells";
 			sourceTree = "<group>";
 		};
-		A7A24073163059CE005F5496 /* ReviewTime */ = {
-			isa = PBXGroup;
-			children = (
-				A7F4DBA9162B632400B98088 /* BRReviewTimeViewController.h */,
-				A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */,
-				A7F4DBAC162B632400B98088 /* BRReviewTimeViewController.xib */,
-			);
-			name = ReviewTime;
-			sourceTree = "<group>";
-		};
-		A7A2407616305A00005F5496 /* iTunesConnect */ = {
-			isa = PBXGroup;
-			children = (
-				A7E494F9162CA40900F34B63 /* BRDeveloperAppsViewController.h */,
-				A7E494FA162CA40900F34B63 /* BRDeveloperAppsViewController.m */,
-				A7E494FB162CA40900F34B63 /* BRDeveloperAppsViewController.xib */,
-			);
-			name = iTunesConnect;
-			sourceTree = "<group>";
-		};
-		A7A2407716305A1B005F5496 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				A7A240791630A969005F5496 /* BRLoginForm */,
-				A7A2407D1630A969005F5496 /* BRRestClient */,
-			);
-			name = Libs;
-			sourceTree = "<group>";
-		};
-		A7A2407816305A35005F5496 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				A7F4DBA0162B632400B98088 /* BRAppDelegate.h */,
-				A7F4DBA1162B632400B98088 /* BRAppDelegate.m */,
-				A7A24073163059CE005F5496 /* ReviewTime */,
-				A7A2407616305A00005F5496 /* iTunesConnect */,
-				A7A24072163059BD005F5496 /* Table view cells */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
 		A7A240791630A969005F5496 /* BRLoginForm */ = {
 			isa = PBXGroup;
 			children = (
 				A7A2407A1630A969005F5496 /* BRLoginFormViewController.h */,
 				A7A2407B1630A969005F5496 /* BRLoginFormViewController.m */,
-				A7A2407C1630A969005F5496 /* BRLoginFormViewController.xib */,
 			);
 			name = BRLoginForm;
 			path = libs/BRLoginForm;
@@ -240,8 +203,9 @@
 		A7F4DB82162B632400B98088 = {
 			isa = PBXGroup;
 			children = (
-				A7F4DB97162B632400B98088 /* iosReviewTime */,
-				A762612416348C68001149A4 /* iRT */,
+				99B5EB511831423E00A7FA50 /* Images.xcassets */,
+				A7F4DB97162B632400B98088 /* iOS Review Time - iOS */,
+				A762612416348C68001149A4 /* iOS Review Time - Mac */,
 				A7F4DB90162B632400B98088 /* Frameworks */,
 				A7F4DB8E162B632400B98088 /* Products */,
 			);
@@ -259,38 +223,48 @@
 		A7F4DB90162B632400B98088 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99B5EBA01831811C00A7FA50 /* Accounts.framework */,
+				99B5EB8418316AF500A7FA50 /* Security.framework */,
+				99B5EB8218316AC900A7FA50 /* MobileCoreServices.framework */,
+				99B5EB8018316AC300A7FA50 /* SystemConfiguration.framework */,
+				99B5EB7E1831622A00A7FA50 /* CFNetwork.framework */,
+				99B5EB551831429D00A7FA50 /* Cocoa.framework */,
 				A7F4DBC0162BDF9200B98088 /* Social.framework */,
 				A7F4DBBE162BDF8300B98088 /* Twitter.framework */,
 				A7F4DB91162B632400B98088 /* UIKit.framework */,
 				A7F4DB93162B632400B98088 /* Foundation.framework */,
 				A7F4DB95162B632400B98088 /* CoreGraphics.framework */,
-				A762611E16348C68001149A4 /* Cocoa.framework */,
+				99B5EB8E1831776D00A7FA50 /* XCTest.framework */,
 				A762612016348C68001149A4 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A7F4DB97162B632400B98088 /* iosReviewTime */ = {
+		A7F4DB97162B632400B98088 /* iOS Review Time - iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A7A2407716305A1B005F5496 /* Libs */,
-				A7A2407816305A35005F5496 /* Sources */,
-				A7A24070163059A9005F5496 /* Resources */,
+				A7F4DBA0162B632400B98088 /* BRAppDelegate.h */,
+				A7F4DBA1162B632400B98088 /* BRAppDelegate.m */,
+				99B5EB57183142E500A7FA50 /* Storyboard.storyboard */,
+				A7F4DBA9162B632400B98088 /* BRReviewTimeViewController.h */,
+				A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */,
+				A7E494F9162CA40900F34B63 /* BRDeveloperAppsViewController.h */,
+				A7E494FA162CA40900F34B63 /* BRDeveloperAppsViewController.m */,
 				A7F4DB98162B632400B98088 /* Supporting Files */,
 			);
+			name = "iOS Review Time - iOS";
 			path = iosReviewTime;
 			sourceTree = "<group>";
 		};
 		A7F4DB98162B632400B98088 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7F4DB99162B632400B98088 /* iosReviewTime-Info.plist */,
+				A7A24072163059BD005F5496 /* Table view cells */,
+				99B5EB601831510700A7FA50 /* BRLogin */,
+				A7F4DB99162B632400B98088 /* iOS Review Time-Info.plist */,
 				A7F4DB9A162B632400B98088 /* InfoPlist.strings */,
 				A7F4DB9D162B632400B98088 /* main.m */,
-				A7F4DB9F162B632400B98088 /* iosReviewTime-Prefix.pch */,
-				A7F4DBA3162B632400B98088 /* Default.png */,
-				A7F4DBA5162B632400B98088 /* Default@2x.png */,
-				A7F4DBA7162B632400B98088 /* Default-568h@2x.png */,
+				A7F4DB9F162B632400B98088 /* iOS Review Time-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -342,7 +316,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "René Bigot";
 			};
-			buildConfigurationList = A7F4DB87162B632400B98088 /* Build configuration list for PBXProject "iosReviewTime" */;
+			buildConfigurationList = A7F4DB87162B632400B98088 /* Build configuration list for PBXProject "iOS Review Time" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -376,16 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F4DB9C162B632400B98088 /* InfoPlist.strings in Resources */,
-				A7F4DBA4162B632400B98088 /* Default.png in Resources */,
-				A7F4DBA6162B632400B98088 /* Default@2x.png in Resources */,
-				A7F4DBA8162B632400B98088 /* Default-568h@2x.png in Resources */,
-				A7F4DBAE162B632400B98088 /* BRReviewTimeViewController.xib in Resources */,
-				A7E494FD162CA40900F34B63 /* BRDeveloperAppsViewController.xib in Resources */,
-				A7F833CF162F024600A0C835 /* appglobe@2x.png in Resources */,
-				A7F833D1162F025A00A0C835 /* appglobe.png in Resources */,
-				A7F833D4162F02A200A0C835 /* clock.png in Resources */,
-				A7F833D5162F02A200A0C835 /* clock@2x.png in Resources */,
-				A7A240831630A969005F5496 /* BRLoginFormViewController.xib in Resources */,
+				99B5EB58183142E500A7FA50 /* Storyboard.storyboard in Resources */,
+				99B5EB521831423E00A7FA50 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,14 +420,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A7F4DBAC162B632400B98088 /* BRReviewTimeViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7F4DBAD162B632400B98088 /* en */,
-			);
-			name = BRReviewTimeViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -469,6 +427,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,6 +451,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -561,10 +523,14 @@
 		A7F4DBB2162B632400B98088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iosReviewTime/iosReviewTime-Prefix.pch";
-				INFOPLIST_FILE = "iosReviewTime/iosReviewTime-Info.plist";
+				GCC_PREFIX_HEADER = "iosReviewTime/iOS Review Time-Prefix.pch";
+				INFOPLIST_FILE = "iosReviewTime/iOS Review Time-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -572,10 +538,14 @@
 		A7F4DBB3162B632400B98088 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iosReviewTime/iosReviewTime-Prefix.pch";
-				INFOPLIST_FILE = "iosReviewTime/iosReviewTime-Info.plist";
+				GCC_PREFIX_HEADER = "iosReviewTime/iOS Review Time-Prefix.pch";
+				INFOPLIST_FILE = "iosReviewTime/iOS Review Time-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -590,8 +560,9 @@
 				A762613716348C68001149A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		A7F4DB87162B632400B98088 /* Build configuration list for PBXProject "iosReviewTime" */ = {
+		A7F4DB87162B632400B98088 /* Build configuration list for PBXProject "iOS Review Time" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7F4DBAF162B632400B98088 /* Debug */,

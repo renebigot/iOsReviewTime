@@ -43,7 +43,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"Succeeded! Received %d bytes of data",[_avatarImageData length]);
+    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[_avatarImageData length]);
     
     connection = nil;
     [self.tweetAvatar setImage:[UIImage imageWithData:_avatarImageData]];

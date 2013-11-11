@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRLoginFormViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate> {
+@interface BRLoginFormViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIBarPositioningDelegate> {
     UITextField *_passwordField;
     UITextField *_usernameField;
 

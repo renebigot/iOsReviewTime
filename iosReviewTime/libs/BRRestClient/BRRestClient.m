@@ -117,7 +117,7 @@
 
 - (NSString *)statusCode {
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-    return [NSString stringWithFormat:@"%d", _status];
+    return [NSString stringWithFormat:@"%ld", (long)_status];
 #else
     return [NSString stringWithFormat:@"%ld", _status];
 #endif
@@ -166,8 +166,8 @@
 
             if (!self.hideError) {
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-                [[[UIAlertView alloc] initWithTitle:[_error localizedDescription]
-                                            message:[[_error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]
+                [[[UIAlertView alloc] initWithTitle:@"Server Error"
+                                            message:[NSString stringWithFormat:@"%@\n%@", [_error localizedDescription], [[_error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]]
                                            delegate:nil
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil] show];
@@ -201,7 +201,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-    NSLog(@"Succeeded! Received %d bytes of data",[_receivedData length]);
+    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[_receivedData length]);
 #else
     NSLog(@"Succeeded! Received %ld bytes of data",[_receivedData length]);
 #endif
@@ -264,6 +264,6 @@
                                           @"Gateway Timeout", @"504",
                                           @"HTTP Version Not Supported", @"505",
                                           nil];
-    return [_restClientHttpError objectForKey:[NSString stringWithFormat:@"%d", statusCode]];
+    return [_restClientHttpError objectForKey:[NSString stringWithFormat:@"%ld", (long)statusCode]];
 }
 @end

@@ -64,7 +64,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"Succeeded! Received %d bytes of data",[_iconImageData length]);
+    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[_iconImageData length]);
     
     connection = nil;
     [self.appIcon setImage:[UIImage imageWithData:_iconImageData]];
