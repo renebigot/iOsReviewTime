@@ -286,8 +286,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if(NSClassFromString(@"SLComposeViewController")) {
-        if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+    if (NSClassFromString(@"SLComposeViewController")) {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
             
             SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
             
@@ -300,7 +300,7 @@
                 
                 [controller dismissViewControllerAnimated:YES completion:Nil];
             };
-            controller.completionHandler =myBlock;
+            controller.completionHandler = myBlock;
             
 
             NSString *postMessage = [NSString stringWithFormat:@"Review for %@ took XX days", [[[_tableViewCells objectAtIndex:indexPath.row] appName] text]];
@@ -309,8 +309,7 @@
             
             [self presentViewController:controller animated:YES completion:Nil];
             
-        }
-        else{
+        } else {
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Not available", nil)
                                         message:NSLocalizedString(@"No setup found for this service. Please verify you device settings.", nil)
                                        delegate:nil
