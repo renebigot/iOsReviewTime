@@ -7,36 +7,13 @@
 //
 
 #import "BRAppCell.h"
-#import "BRRestClient.h"
 
 @implementation BRAppCell
 
-- (void)downloadIcon:(NSString *)appID {
-    NSURL *ituneApi = [NSURL URLWithString:@"http://itunes.apple.com"];
-    NSString *searchURI = [NSString stringWithFormat:@"/lookup?id=%@", appID];
-    
-    BRRestClient *restClient = [[BRRestClient alloc] init];
-    [restClient setBaseURL:ituneApi];
-    [restClient read:searchURI withCompletionBlock:^{
-        NSError *error;
-        NSDictionary *dictFromJSON = [NSJSONSerialization JSONObjectWithData:[restClient rawServerResponse]
-                                                                   options:NSJSONReadingAllowFragments error:&error];
-        
-        if (error) {
-            self.appIcon = nil;
-            [self.activityIndicator setHidden:YES];
-            return ;
-        }
-        
-        NSArray *resultArray = [dictFromJSON objectForKey:@"results"];
-        if ([resultArray count]) {
-            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[[resultArray objectAtIndex:0] objectForKey:@"artworkUrl512"]]];
-            [NSURLConnection connectionWithRequest:request delegate:self];
-            [self.activityIndicator setHidden:NO];
-        } else {
-            [self.activityIndicator setHidden:YES];
-        }
-    }];
+- (void)downloadIconFromURL:(NSString *)appIconURL {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:appIconURL]];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+    [self.activityIndicator setHidden:NO];
 }
 
 #pragma mark - NSURLConnectionDataDelegate
@@ -53,24 +30,16 @@
     connection = nil;
     _iconImageData = nil;
     
-    [[[UIAlertView alloc] initWithTitle:[error localizedDescription]
-                                message:[[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:[error localizedDescription] message:[[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
     
     [self.activityIndicator setHidden:YES];
-    
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[_iconImageData length]);
-    
     connection = nil;
     [self.appIcon setImage:[UIImage imageWithData:_iconImageData]];
     
     [self.activityIndicator setHidden:YES];
 }
-
 
 @end

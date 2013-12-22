@@ -4,11 +4,18 @@
 
 #import <Availability.h>
 
-#ifndef __IPHONE_4_0
-#warning "This project uses features only available in iOS SDK 4.0 and later."
+#ifndef __IPHONE_7_0
+#error This project uses features only available in iOS SDK 7.0 and later.
+#endif
+
+#if !__has_feature(objc_arc)
+#error This project requires Objective-C ARC to be enabled.
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
+    @import UIKit;
+    @import Foundation;
+    @import Accounts;
+    @import Social;
+    @import Twitter;
 #endif

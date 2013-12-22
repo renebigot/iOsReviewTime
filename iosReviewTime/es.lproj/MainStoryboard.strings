@@ -1,0 +1,33 @@
+
+/* Class = "IBUITabBarItem"; title = "Apps"; ObjectID = "2Pm-PW-zIw"; */
+"2Pm-PW-zIw.title" = "Aplicaciones";
+
+/* Class = "IBUINavigationItem"; title = "Developer Login"; ObjectID = "6uP-5h-y5m"; */
+"6uP-5h-y5m.title" = "Desarrollador Iniciar";
+
+/* Class = "IBUITabBarItem"; title = "Review Time"; ObjectID = "JMy-2H-JPn"; */
+"JMy-2H-JPn.title" = "Tiempo de Revisión";
+
+/* Class = "IBUINavigationItem"; title = "Developer Apps"; ObjectID = "Qct-Ul-AaM"; */
+"Qct-Ul-AaM.title" = "Aplicaciones Desarrollador";
+
+/* Class = "IBUIBarButtonItem"; title = "Login"; ObjectID = "V77-0T-A4P"; */
+"V77-0T-A4P.title" = "Iniciar";
+
+/* Class = "IBUITextField"; placeholder = "Organization Name"; ObjectID = "eTG-si-OPf"; */
+"eTG-si-OPf.placeholder" = "Nombre de la Organización";
+
+/* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "j1t-8n-ka1"; */
+"j1t-8n-ka1.title" = "Cancelar";
+
+/* Class = "IBUILabel"; text = "Average review time for the last 7 days"; ObjectID = "kKd-5I-bVT"; */
+"kKd-5I-bVT.text" = "Tiempo promedio de los comentarios de los últimos 7 días";
+
+/* Class = "IBUINavigationItem"; title = "iOS Review Time"; ObjectID = "lHx-qu-jYH"; */
+"lHx-qu-jYH.title" = "iOS Tiempo de Revisión";
+
+/* Class = "IBUILabel"; text = "Type the name of your iOS AppStore development company below. This is used to query the AppStore for all of your apps."; ObjectID = "nui-rj-6YK"; */
+"nui-rj-6YK.text" = "Escriba el nombre de su empresa de desarrollo de iOS AppStore continuación. Esto se utiliza para consultar la AppStore para todas sus aplicaciones.";
+
+/* Class = "IBUILabel"; text = "X Days"; ObjectID = "oWD-bF-c69"; */
+"oWD-bF-c69.text" = "X Días";

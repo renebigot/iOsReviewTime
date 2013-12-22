@@ -1,18 +1,17 @@
-#Track AppStore Review Times
+#iOS Review Time
+An iOS / Mac app for tracking the iOS AppStore review times. Collects crowdsourced data from Twitter using the **#iosreviewtime** hashtag.
+
+###Track AppStore Review Times
 iOS Review Time will connect to Twitter to fetch review times from developer posting on twitter  [#iosreviewtime](https://twitter.com/search?q=%23iosreviewtime). This is an original idea from [shinydevelopment](http://reviewtimes.shinydevelopment.com/)
 
-#Share AppStore Review Times
-Connect to iTunesConnect to retrieve your apps list and tweet about your app review time.
+###Share AppStore Review Times
+Add your developer name or team name to retrieve your apps list and tweet about your app review time.
 
-#Screenshots
-Review time and twitter feed view
-![Review Feed](https://github.com/iRareMedia/iOsReviewTime/raw/master/reviewTime.png) 
+##Compatibility
+Works on iOS 7.0+, ARC, and 64-bit Architecture. Compatible with iPhone, no iPad version for the moment. Light edition for OS X shows review time in OS X status bar.
 
-#Compatibility
-Works on iOS 6.0+ and iOS 7.0+. Compatible with iPhone, no iPad version for the moment. Light edition for OS X: show review time in OS X status bar.
-
-#Updates
+##Updates
 Work in progress, star for updates and information. Stay tuned for more!
 
-#License
+##License
 BSD License

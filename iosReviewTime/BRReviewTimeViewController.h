@@ -2,13 +2,9 @@
 //  BRReviewTimeViewController.h
 //  iosReviewTime
 //
-//  Created by René Bigot on 14/10/12.
-//  Copyright (c) 2012 René Bigot. All rights reserved.
+//  Created by iRare Media on 12/20/13.
+//  Copyright (c) 2013 iRare Media. All rights reserved.
 //
-
-#import <UIKit/UIKit.h>
-#import <Accounts/Accounts.h>
-#import <Social/Social.h>
 
 @interface BRReviewTimeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIBarPositioningDelegate, NSURLConnectionDelegate>
 
@@ -16,7 +12,7 @@
 @property (strong, nonatomic) NSURLConnection *connection;
 @property (strong, nonatomic) NSMutableData *requestData;
 @property (strong, nonatomic) NSURL *apiURL;
-@property (nonatomic, strong) NSMutableArray *results;
+@property (strong, nonatomic) NSMutableArray *results;
 
 @property (strong, nonatomic) NSDecimalNumber *tweetsCount;
 @property (strong, nonatomic) NSMutableArray *tableViewCells;

@@ -1,0 +1,82 @@
+/* 
+  Localizable.strings
+  iOS Review Time
+
+  Created by iRare Media on 12/21/13.
+  Copyright (c) 2013 iRare Media. All rights reserved.
+*/
+
+/* No comment provided by engineer. */
+"%@ days" = "%@ Jours";
+
+/* No comment provided by engineer. */
+"Apps created by %@" = "Applications créés par %@";
+
+/* Status Text */
+"Authenticating Twitter" = "Authentification Twitter";
+
+/* Status Text */
+"Average review time for last 7 days" = "Temps moyen pour la semaine passée";
+
+/* Status Text */
+"Connected to Twitter" = "Connecté à Twitter";
+
+/* Status Text */
+"Connecting Twitter" = "Connexion à Twitter";
+
+/* AFNetworking */
+"Could not decode string: %@" = "Impossible de décoder chaîne: %@";
+
+/* AFNetworking */
+"Data failed decoding as a UTF-8 string" = "De données n'a pas de décodage comme une chaîne UTF-8";
+
+/* Status Text */
+"Downloading Tweets" = "Téléchargement du Tweets";
+
+/* Time Display Title */
+"Error" = "Erreur";
+
+/* No comment provided by engineer. */
+"Error Loading Tweets: %ld" = "Erreur lors du chargement des tweets: %ld";
+
+/* Status Text */
+"Error Parsing Tweets" = "Erreur lors de l'analyse de la Tweets";
+
+/* Status Text */
+"Failed to Reach Twitter" = "Impossible de se connecter à Twitter";
+
+/* Button Title */
+"Login" = "Connexion";
+
+/* Button Title */
+"Logout" = "Déconnexion";
+
+/* Time Display Label */
+"No Twitter" = "Pas de Twitter";
+
+/* Time Display Label */
+"No Twitter Access. Login in the Settings App" = "Pas d'accès à Twitter. Connectez-vous sur l'App Paramètres.";
+
+/* Alert Title */
+"No Twitter Accounts" = "Pas de comptes Twitter";
+
+/* No comment provided by engineer. */
+"Okay" = "OK";
+
+/* Status Text */
+"Querying Twitter" = "Recherche Twitter";
+
+/* No comment provided by engineer. */
+"Review for %@ took XX days" = "Revue de l'application pour %@ a XX jours";
+
+/* Alert Message */
+"There are no Twitter accounts configured. You can add or create a Twitter account in Settings." = "Il n'y a pas de comptes Twitter configurés. Vous pouvez ajouter ou créer un compte Twitter dans Paramètres.";
+
+/* No comment provided by engineer. */
+"To tweet about your app review times, tap the login button and type your Organization / Team name" = "Pour tweet sur vos délais d'examen de l'application, appuyez sur le bouton d'ouverture de session et tapez votre Organisation / Nom de l'équipe";
+
+/* No comment provided by engineer. */
+"Version %@ | %@" = "Version %1$@ | %2$@";
+
+/* Number of Days Display */
+"X days" = "X Jours";

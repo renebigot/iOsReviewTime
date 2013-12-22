@@ -2,12 +2,11 @@
 //  BRReviewTimeViewController.m
 //  iosReviewTime
 //
-//  Created by René Bigot on 14/10/12.
-//  Copyright (c) 2012 René Bigot. All rights reserved.
+//  Created by iRare Media on 14/10/12.
+//  Copyright (c) 2013 iRare Media. All rights reserved.
 //
 
 #import "BRReviewTimeViewController.h"
-#import "BRRestClient.h"
 #import "BRTweetCell.h"
 
 @interface BRReviewTimeViewController ()
@@ -43,10 +42,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     BRTweetCell *currentCell = [tableViewCells objectAtIndex:indexPath.row];
-    CGSize detailTextSize = [currentCell.tweetText.text sizeWithFont:[[currentCell tweetText] font] constrainedToSize:CGSizeMake(currentCell.tweetText.frame.size.width, 1000) lineBreakMode:currentCell.detailTextLabel.lineBreakMode];
-    [[currentCell tweetText] setFrame:CGRectMake(currentCell.tweetText.frame.origin.x, currentCell.tweetText.frame.origin.y, detailTextSize.width, detailTextSize.height)];
-    [currentCell setFrame:CGRectMake(0, 0, detailTextSize.width, currentCell.tweetText.frame.origin.y + detailTextSize.height + 3)];
-
     return currentCell.frame.size.height;
 }
 
@@ -71,22 +66,26 @@
 #pragma mark - Twitter Content
 
 - (IBAction)refreshTweets:(id)sender {
+    if (![self userHasAccessToTwitter]) {
+        [self displayNoTwitterError];
+        return;
+    }
+    
     tweetsCount = [NSDecimalNumber zero];
     tableViewCells = [[NSMutableArray alloc] init];
     
     [activityIndicator setHidden:NO];
     [activityIndicator startAnimating];
     [reviewTimeLabel setHidden:YES];
-    //[tableview setHidden:YES];
-    [reviewTimeLabel setText:@"X Days"];
-    [statusLabel setText:@"Authenticating Twitter"];
+    [reviewTimeLabel setText:NSLocalizedString(@"X days", @"Number of Days Display")];
+    [statusLabel setText:NSLocalizedString(@"Authenticating Twitter", @"Status Text")];
     
     ACAccountType *twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     // Authenticate the account
     [self.accountStore requestAccessToAccountsWithType:twitterAccountType options:NULL completion:^(BOOL granted, NSError *error) {
-        [statusLabel setText:@"Querying Twitter"];
+        [statusLabel setText:NSLocalizedString(@"Querying Twitter", @"Status Text")];
         
         // Create search parameters
         NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":@"100", @"result_type":@"mixed"};
@@ -100,7 +99,7 @@
         
         // Disptach on main thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            [statusLabel setText:@"Connecting to Twitter"];
+            [statusLabel setText:NSLocalizedString(@"Connecting Twitter", @"Status Text")];
             self.connection = [[NSURLConnection alloc] initWithRequest:[request preparedURLRequest] delegate:self];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         });
@@ -112,10 +111,13 @@
 }
 
 - (void)displayNoTwitterError {
-    [statusLabel setText:@"No Twitter Access. Login in the Settings App"];
-    [reviewTimeLabel setText:@"No Twitter"];
+    [activityIndicator setHidden:YES];
+    [activityIndicator stopAnimating];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Twitter" message:@"Twitter requires an authenticated account in order to use their APIs.  Add an account to your device to continue." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    [statusLabel setText:NSLocalizedString(@"No Twitter Access. Login in the Settings App", @"Time Display Label")];
+    [reviewTimeLabel setText:NSLocalizedString(@"No Twitter", @"Time Display Label")];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Twitter Accounts", @"Alert Title") message:NSLocalizedString(@"There are no Twitter accounts configured. You can add or create a Twitter account in Settings.", @"Alert Message") delegate:nil cancelButtonTitle:NSLocalizedString(@"Okay", nil) otherButtonTitles:nil];
     [alert show];
 }
 
@@ -130,16 +132,16 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [statusLabel setText:@"Connected to Twitter"];
+    [statusLabel setText:NSLocalizedString(@"Connected to Twitter", @"Status Text")];
     
     self.connection = nil;
     
     if (self.requestData) {
-        [statusLabel setText:@"Downloading Tweets"];
+        [statusLabel setText:NSLocalizedString(@"Downloading Tweets", @"Status Text")];
         NSError *jsonError;
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:self.requestData options:NSJSONReadingAllowFragments error:&jsonError];
         if (jsonError) {
-            [statusLabel setText:@"Error Parsing Tweets"];
+            [statusLabel setText:NSLocalizedString(@"Error Parsing Tweets", @"Status Text")];
             return;
         }
         
@@ -147,15 +149,15 @@
         
         [self parseTweetsFromArray:results completion:^(NSError *error) {
             if (error) {
-                [statusLabel setText:[NSString stringWithFormat:@"Error Loading Tweets: %ld", (long)error.code]];
+                [statusLabel setText:[NSString stringWithFormat:NSLocalizedString(@"Error Loading Tweets: %ld", nil), (long)error.code]];
                 [activityIndicator stopAnimating];
                 [activityIndicator setHidden:YES];
-                [reviewTimeLabel setText:@"Error"];
+                [reviewTimeLabel setText:NSLocalizedString(@"Error", @"Time Display Title")];
                 [reviewTimeLabel setHidden:NO];
                 [tableview setHidden:YES];
                 return;
             } else {
-                [statusLabel setText:@"Average review time for last 7 days"];
+                [statusLabel setText:NSLocalizedString(@"Average review time for last 7 days", @"Status Text")];
                 [activityIndicator stopAnimating];
                 [activityIndicator setHidden:YES];
                 [reviewTimeLabel setHidden:NO];
@@ -173,7 +175,7 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [statusLabel setText:@"Failed to Reach Twitter"];
+    [statusLabel setText:NSLocalizedString(@"Failed to Reach Twitter", @"Status Text")];
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     self.connection = nil;
@@ -215,23 +217,25 @@
                     @try {
                         NSString *substringForFirstMatch = [tweetText substringWithRange:rangeOfFirstMatch];
                         NSDecimalNumber *daysCount = [NSDecimalNumber decimalNumberWithString:substringForFirstMatch];
-                        NSLog(@"Days: %@", daysCount);
                         
                         if (![daysCount isEqual:[NSDecimalNumber notANumber]]) {
                             averageDaysCount = [averageDaysCount decimalNumberByAdding:daysCount];
                             
-                            NSLog(@"%@: %@", tweetDate, tweetText);
                             tweetsCount = [tweetsCount decimalNumberByAdding:[NSDecimalNumber one]];
                             
                             static NSString *reuseIdentifier = @"Cell";
                             BRTweetCell *cell = [tableview dequeueReusableCellWithIdentifier:reuseIdentifier];
                             
+                            // Get the user data
                             NSDictionary *user = [tweet objectForKey:@"user"];
+                            
+                            // Get the tweet text, user and URL
                             cell.tweetUser.text = [NSString stringWithFormat:@"%@ @%@", [user objectForKey:@"name"], [user objectForKey:@"screen_name"]];
                             cell.tweetText.text = [tweet objectForKey:@"text"];
                             cell.tweetUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://mobile.twitter.com/%@/%@", [tweet objectForKey:@"from_user"], [tweet objectForKey:@"id_str"]]];
-                            NSURL *imageUrl = [NSURL URLWithString:[user objectForKey:@"profile_image_url"]];
-                            [cell downloadAvatar:imageUrl];
+                            
+                            // Get the high resolution profile picture
+                            [cell downloadAvatar:[NSURL URLWithString:[[user objectForKey:@"profile_image_url"] stringByReplacingOccurrencesOfString:@"_normal" withString:@""]]];
                             
                             [tableViewCells addObject:cell];
                         }
@@ -247,7 +251,10 @@
     NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
     averageDaysCount = [averageDaysCount decimalNumberByDividingBy:tweetsCount withBehavior:roundingBehavior];
     
-    [reviewTimeLabel setText:[NSString stringWithFormat:@"%@ days", averageDaysCount]];
+    [reviewTimeLabel setText:[NSString stringWithFormat:NSLocalizedString(@"%@ days", nil), averageDaysCount]];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"badgeCount"] == YES) [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[averageDaysCount intValue]];
+    else [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     [tableview reloadData];
     

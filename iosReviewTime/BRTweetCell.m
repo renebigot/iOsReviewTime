@@ -31,20 +31,12 @@
     connection = nil;
     _avatarImageData = nil;
     
-    
-    [[[UIAlertView alloc] initWithTitle:[error localizedDescription]
-                                message:[[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:[error localizedDescription] message:[[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     
     [_activityIndicator setHidden:YES];
-
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[_avatarImageData length]);
-    
     connection = nil;
     [self.tweetAvatar setImage:[UIImage imageWithData:_avatarImageData]];
 

@@ -1,0 +1,82 @@
+/* 
+  Localizable.strings
+  iOS Review Time
+
+  Created by iRare Media on 12/21/13.
+  Copyright (c) 2013 iRare Media. All rights reserved.
+*/
+
+/* No comment provided by engineer. */
+"%@ days" = "%@ días";
+
+/* No comment provided by engineer. */
+"Apps created by %@" = "Aplicaciones creadas por %@";
+
+/* Status Text */
+"Authenticating Twitter" = "La autenticación de Twitter";
+
+/* Status Text */
+"Average review time for last 7 days" = "El tiempo promedio para la última semana";
+
+/* Status Text */
+"Connected to Twitter" = "Conectado a Twitter";
+
+/* Status Text */
+"Connecting Twitter" = "Conectar a Twitter";
+
+/* AFNetworking */
+"Could not decode string: %@" = "No se pudo descifrar la cadena: %@";
+
+/* AFNetworking */
+"Data failed decoding as a UTF-8 string" = "De datos no pudo decodificación como una cadena UTF-8";
+
+/* Status Text */
+"Downloading Tweets" = "Tweets Descargando";
+
+/* Time Display Title */
+"Error" = "Error";
+
+/* No comment provided by engineer. */
+"Error Loading Tweets: %ld" = "Error al Tweets de carga: %ld";
+
+/* Status Text */
+"Error Parsing Tweets" = "Error al Tweets análisis sintáctico";
+
+/* Status Text */
+"Failed to Reach Twitter" = "No se pudo conectar a Twitter";
+
+/* Button Title */
+"Login" = "Iniciar";
+
+/* Button Title */
+"Logout" = "Salir";
+
+/* Time Display Label */
+"No Twitter" = "No Twitter";
+
+/* Time Display Label */
+"No Twitter Access. Login in the Settings App" = "No hay acceso a Twitter. Ingresar en el App Configuración";
+
+/* Alert Title */
+"No Twitter Accounts" = "No hay cuentas de Twitter";
+
+/* No comment provided by engineer. */
+"Okay" = "OK";
+
+/* Status Text */
+"Querying Twitter" = "Búsqueda Twitter";
+
+/* No comment provided by engineer. */
+"Review for %@ took XX days" = "Reseña para %@ tomó XX días";
+
+/* Alert Message */
+"There are no Twitter accounts configured. You can add or create a Twitter account in Settings." = "No hay cuentas de Twitter configurados. Usted puede agregar o crear una cuenta de Twitter en la configuración.";
+
+/* No comment provided by engineer. */
+"To tweet about your app review times, tap the login button and type your Organization / Team name" = "Para tweet acerca de su opinión App veces, toque el botón de inicio de sesión y escriba su / Nombre del equipo Organización";
+
+/* No comment provided by engineer. */
+"Version %@ | %@" = "Versión %1$@ | %2$@";
+
+/* Number of Days Display */
+"X days" = "X días";
