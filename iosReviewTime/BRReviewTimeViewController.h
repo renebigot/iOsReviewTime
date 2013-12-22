@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 iRare Media. All rights reserved.
 //
 
+#import "NSDate+Calendar.h"
+
 @interface BRReviewTimeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIBarPositioningDelegate, NSURLConnectionDelegate>
 
 @property (strong, nonatomic) ACAccountStore *accountStore;

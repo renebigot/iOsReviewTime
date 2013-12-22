@@ -147,6 +147,7 @@
         
         self.results = dict[@"statuses"];
         
+        // Parse the downloaded tweets - these will be displayed and an average will be calculated
         [self parseTweetsFromArray:results completion:^(NSError *error) {
             if (error) {
                 [statusLabel setText:[NSString stringWithFormat:NSLocalizedString(@"Error Loading Tweets: %ld", nil), (long)error.code]];
@@ -157,7 +158,19 @@
                 [tableview setHidden:YES];
                 return;
             } else {
-                [statusLabel setText:NSLocalizedString(@"Average review time for last 7 days", @"Status Text")];
+                // Check to see if iTunes Connect is shutdown for the holidays
+                if ([self date:[NSDate date] isBetweenDate:[NSDate dateWithMonth:12 day:21] andDate:[NSDate dateWithMonth:12 day:28]]) {
+                    // iTunes Connect is shutdown, hide the app badge no matter what the user's setting is, and then display a warning about innaccuracy. The warning message is more detailed on the iPad becuase there is more space
+                    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+                    
+                    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) [statusLabel setText:NSLocalizedString(@"iTunes Connect is Shutdown for the Winter Holiday until December 28. Review Times for this week may be inaccurate.", @"iPad Warning for iTC Holiday Shutdown")];
+                    else [statusLabel setText:NSLocalizedString(@"iTC is shutdown until Dec 28. Review Times may be inaccurate.", @"iPhone Warning for iTC Holiday Shutdown")];
+                    
+                } else {
+                    // iTC is not shutdown for the winter holiday, just display the default text
+                    [statusLabel setText:NSLocalizedString(@"Average review time for last 7 days", @"Status Text")];
+                }
+                
                 [activityIndicator stopAnimating];
                 [activityIndicator setHidden:YES];
                 [reviewTimeLabel setHidden:NO];
@@ -265,6 +278,14 @@
         completionBlock(nil);
         return;
     }
+}
+
+- (BOOL)date:(NSDate *)date isBetweenDate:(NSDate *)beginDate andDate:(NSDate *)endDate {
+    if ([date compare:beginDate] == NSOrderedAscending) return NO;
+    
+    if ([date compare:endDate] == NSOrderedDescending) return NO;
+    
+    return YES;
 }
 
 @end

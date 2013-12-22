@@ -30,12 +30,15 @@
 		9963B1EA18666F0F009F53B5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9963B1E918666F0F009F53B5 /* Settings.bundle */; };
 		9995C29E1866984A00A43BFD /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9995C29D1866984A00A43BFD /* Accounts.framework */; };
 		9995C2A01866985800A43BFD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9995C29F1866985800A43BFD /* Social.framework */; };
-		9995C2A71866A35D00A43BFD /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 9995C2A11866A35D00A43BFD /* LICENSE.md */; };
-		9995C2A81866A35D00A43BFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9995C2A21866A35D00A43BFD /* README.md */; };
-		9995C2A91866A35D00A43BFD /* AppList.png in Resources */ = {isa = PBXBuildFile; fileRef = 9995C2A41866A35D00A43BFD /* AppList.png */; };
-		9995C2AA1866A35D00A43BFD /* AppPost.png in Resources */ = {isa = PBXBuildFile; fileRef = 9995C2A51866A35D00A43BFD /* AppPost.png */; };
-		9995C2AB1866A35D00A43BFD /* AppTime.png in Resources */ = {isa = PBXBuildFile; fileRef = 9995C2A61866A35D00A43BFD /* AppTime.png */; };
-		9995C2AD1866A69F00A43BFD /* Screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = 9995C2AC1866A69F00A43BFD /* Screenshots.png */; };
+		99A724AB1867875C0062A2D3 /* NSDate+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A7249C1867875C0062A2D3 /* NSDate+Compare.m */; };
+		99A724AC1867875C0062A2D3 /* NSDate+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A7249E1867875C0062A2D3 /* NSDate+Components.m */; };
+		99A724AD1867875C0062A2D3 /* NSDate+DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724A01867875C0062A2D3 /* NSDate+DateTime.m */; };
+		99A724AE1867875C0062A2D3 /* NSDate+Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724A21867875C0062A2D3 /* NSDate+Day.m */; };
+		99A724AF1867875C0062A2D3 /* NSDate+Month.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724A41867875C0062A2D3 /* NSDate+Month.m */; };
+		99A724B01867875C0062A2D3 /* NSDate+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724A61867875C0062A2D3 /* NSDate+Time.m */; };
+		99A724B11867875C0062A2D3 /* NSDate+Week.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724A81867875C0062A2D3 /* NSDate+Week.m */; };
+		99A724B21867875C0062A2D3 /* NSDate+Year.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724AA1867875C0062A2D3 /* NSDate+Year.m */; };
+		99B2B94118677FEF00F0E456 /* PadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B2B93C18677C1500F0E456 /* PadStoryboard.storyboard */; };
 		99B5EB521831423E00A7FA50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B5EB511831423E00A7FA50 /* Images.xcassets */; };
 		99B5EB561831429D00A7FA50 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB551831429D00A7FA50 /* Cocoa.framework */; };
 		99B5EB5B1831454400A7FA50 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB591831453900A7FA50 /* AppKit.framework */; };
@@ -127,6 +130,26 @@
 		9995C2A51866A35D00A43BFD /* AppPost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppPost.png; sourceTree = "<group>"; };
 		9995C2A61866A35D00A43BFD /* AppTime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppTime.png; sourceTree = "<group>"; };
 		9995C2AC1866A69F00A43BFD /* Screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshots.png; sourceTree = "<group>"; };
+		99A7249A1867875C0062A2D3 /* NSDate+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendar.h"; sourceTree = "<group>"; };
+		99A7249B1867875C0062A2D3 /* NSDate+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Compare.h"; sourceTree = "<group>"; };
+		99A7249C1867875C0062A2D3 /* NSDate+Compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Compare.m"; sourceTree = "<group>"; };
+		99A7249D1867875C0062A2D3 /* NSDate+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Components.h"; sourceTree = "<group>"; };
+		99A7249E1867875C0062A2D3 /* NSDate+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Components.m"; sourceTree = "<group>"; };
+		99A7249F1867875C0062A2D3 /* NSDate+DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateTime.h"; sourceTree = "<group>"; };
+		99A724A01867875C0062A2D3 /* NSDate+DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateTime.m"; sourceTree = "<group>"; };
+		99A724A11867875C0062A2D3 /* NSDate+Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Day.h"; sourceTree = "<group>"; };
+		99A724A21867875C0062A2D3 /* NSDate+Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Day.m"; sourceTree = "<group>"; };
+		99A724A31867875C0062A2D3 /* NSDate+Month.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Month.h"; sourceTree = "<group>"; };
+		99A724A41867875C0062A2D3 /* NSDate+Month.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Month.m"; sourceTree = "<group>"; };
+		99A724A51867875C0062A2D3 /* NSDate+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Time.h"; sourceTree = "<group>"; };
+		99A724A61867875C0062A2D3 /* NSDate+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Time.m"; sourceTree = "<group>"; };
+		99A724A71867875C0062A2D3 /* NSDate+Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Week.h"; sourceTree = "<group>"; };
+		99A724A81867875C0062A2D3 /* NSDate+Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Week.m"; sourceTree = "<group>"; };
+		99A724A91867875C0062A2D3 /* NSDate+Year.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Year.h"; sourceTree = "<group>"; };
+		99A724AA1867875C0062A2D3 /* NSDate+Year.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Year.m"; sourceTree = "<group>"; };
+		99B2B93B18677C1500F0E456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PadStoryboard.storyboard; sourceTree = "<group>"; };
+		99B2B93E18677C1D00F0E456 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/PadStoryboard.strings; sourceTree = "<group>"; };
+		99B2B94018677C1D00F0E456 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PadStoryboard.strings; sourceTree = "<group>"; };
 		99B5EB511831423E00A7FA50 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iOSReviewTime/Images.xcassets; sourceTree = "<group>"; };
 		99B5EB551831429D00A7FA50 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		99B5EB591831453900A7FA50 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -271,6 +294,37 @@
 			path = Screenshots;
 			sourceTree = "<group>";
 		};
+		99A724991867875C0062A2D3 /* NSDate Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				99A7249A1867875C0062A2D3 /* NSDate+Calendar.h */,
+				99A7249B1867875C0062A2D3 /* NSDate+Compare.h */,
+				99A7249C1867875C0062A2D3 /* NSDate+Compare.m */,
+				99A7249D1867875C0062A2D3 /* NSDate+Components.h */,
+				99A7249E1867875C0062A2D3 /* NSDate+Components.m */,
+				99A7249F1867875C0062A2D3 /* NSDate+DateTime.h */,
+				99A724A01867875C0062A2D3 /* NSDate+DateTime.m */,
+				99A724A11867875C0062A2D3 /* NSDate+Day.h */,
+				99A724A21867875C0062A2D3 /* NSDate+Day.m */,
+				99A724A31867875C0062A2D3 /* NSDate+Month.h */,
+				99A724A41867875C0062A2D3 /* NSDate+Month.m */,
+				99A724A51867875C0062A2D3 /* NSDate+Time.h */,
+				99A724A61867875C0062A2D3 /* NSDate+Time.m */,
+				99A724A71867875C0062A2D3 /* NSDate+Week.h */,
+				99A724A81867875C0062A2D3 /* NSDate+Week.m */,
+				99A724A91867875C0062A2D3 /* NSDate+Year.h */,
+				99A724AA1867875C0062A2D3 /* NSDate+Year.m */,
+			);
+			path = "NSDate Extensions";
+			sourceTree = "<group>";
+		};
+		99B2B93718677B6300F0E456 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		A762612016348C68001149A4 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +374,7 @@
 		A7F4DB82162B632400B98088 = {
 			isa = PBXGroup;
 			children = (
+				99B2B93718677B6300F0E456 /* iPad */,
 				9995C2A11866A35D00A43BFD /* LICENSE.md */,
 				9995C2A21866A35D00A43BFD /* README.md */,
 				9995C2A31866A35D00A43BFD /* Screenshots */,
@@ -368,6 +423,7 @@
 				A7F4DBA0162B632400B98088 /* BRAppDelegate.h */,
 				A7F4DBA1162B632400B98088 /* BRAppDelegate.m */,
 				992BD152186664BD001AD587 /* MainStoryboard.storyboard */,
+				99B2B93C18677C1500F0E456 /* PadStoryboard.storyboard */,
 				A7F4DBA9162B632400B98088 /* BRReviewTimeViewController.h */,
 				A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */,
 				A7E494F9162CA40900F34B63 /* DeveloperAppsViewController.h */,
@@ -383,6 +439,7 @@
 		A7F4DB98162B632400B98088 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99A724991867875C0062A2D3 /* NSDate Extensions */,
 				9949AB5D1865FB85003C60D1 /* AFNetworking */,
 				994BB59C186552B0005F9EAE /* FDKeychain */,
 				A7A24072163059BD005F5496 /* TableView Cells */,
@@ -487,15 +544,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9995C2AB1866A35D00A43BFD /* AppTime.png in Resources */,
-				9995C2A81866A35D00A43BFD /* README.md in Resources */,
-				9995C2A71866A35D00A43BFD /* LICENSE.md in Resources */,
-				9995C2A91866A35D00A43BFD /* AppList.png in Resources */,
-				9963B1EA18666F0F009F53B5 /* Settings.bundle in Resources */,
-				9995C2AD1866A69F00A43BFD /* Screenshots.png in Resources */,
-				992BD15D18666663001AD587 /* Localizable.strings in Resources */,
-				9995C2AA1866A35D00A43BFD /* AppPost.png in Resources */,
+				99B2B94118677FEF00F0E456 /* PadStoryboard.storyboard in Resources */,
 				992BD150186664BD001AD587 /* MainStoryboard.storyboard in Resources */,
+				992BD15D18666663001AD587 /* Localizable.strings in Resources */,
+				9963B1EA18666F0F009F53B5 /* Settings.bundle in Resources */,
 				99B5EB521831423E00A7FA50 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,20 +571,28 @@
 				9949AB711865FB85003C60D1 /* AFHTTPRequestOperation.m in Sources */,
 				A7F4DB9E162B632400B98088 /* main.m in Sources */,
 				9949AB8D18660954003C60D1 /* UIButton+AFNetworking.m in Sources */,
+				99A724B21867875C0062A2D3 /* NSDate+Year.m in Sources */,
 				9949AB8F18660954003C60D1 /* UIProgressView+AFNetworking.m in Sources */,
+				99A724AC1867875C0062A2D3 /* NSDate+Components.m in Sources */,
 				A7F4DBA2162B632400B98088 /* BRAppDelegate.m in Sources */,
 				A7F4DBAB162B632400B98088 /* BRReviewTimeViewController.m in Sources */,
 				9949AB8C18660954003C60D1 /* UIAlertView+AFNetworking.m in Sources */,
+				99A724AF1867875C0062A2D3 /* NSDate+Month.m in Sources */,
 				A7F4DBC8162C614A00B98088 /* BRTweetCell.m in Sources */,
+				99A724AD1867875C0062A2D3 /* NSDate+DateTime.m in Sources */,
+				99A724B01867875C0062A2D3 /* NSDate+Time.m in Sources */,
 				9949AB791865FB85003C60D1 /* AFURLSessionManager.m in Sources */,
+				99A724AE1867875C0062A2D3 /* NSDate+Day.m in Sources */,
 				9949AB731865FB85003C60D1 /* AFHTTPSessionManager.m in Sources */,
 				9949AB8E18660954003C60D1 /* UIImageView+AFNetworking.m in Sources */,
 				A7E494FC162CA40900F34B63 /* DeveloperAppsViewController.m in Sources */,
 				9949AB8B18660954003C60D1 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9949AB8A18660954003C60D1 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				99A724B11867875C0062A2D3 /* NSDate+Week.m in Sources */,
 				9949AB741865FB85003C60D1 /* AFNetworkReachabilityManager.m in Sources */,
 				A7E49501162CA76500F34B63 /* BRAppCell.m in Sources */,
 				9949AB781865FB85003C60D1 /* AFURLResponseSerialization.m in Sources */,
+				99A724AB1867875C0062A2D3 /* NSDate+Compare.m in Sources */,
 				9949AB771865FB85003C60D1 /* AFURLRequestSerialization.m in Sources */,
 				9949AB761865FB85003C60D1 /* AFURLConnectionOperation.m in Sources */,
 				9949AB721865FB85003C60D1 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -564,6 +624,16 @@
 				992BD16218666667001AD587 /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		99B2B93C18677C1500F0E456 /* PadStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99B2B93B18677C1500F0E456 /* Base */,
+				99B2B93E18677C1D00F0E456 /* fr */,
+				99B2B94018677C1D00F0E456 /* es */,
+			);
+			name = PadStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		A762612716348C68001149A4 /* InfoPlist.strings */ = {
@@ -709,6 +779,7 @@
 				INFOPLIST_FILE = "iosReviewTime/iOS Review Time-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -726,6 +797,7 @@
 				INFOPLIST_FILE = "iosReviewTime/iOS Review Time-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
