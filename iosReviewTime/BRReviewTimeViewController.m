@@ -2,8 +2,8 @@
 //  BRReviewTimeViewController.m
 //  iosReviewTime
 //
-//  Created by iRare Media on 14/10/12.
-//  Copyright (c) 2013 iRare Media. All rights reserved.
+//  Created by René Bigot on 14/10/12.
+//  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved.
 //
 
 #import "BRReviewTimeViewController.h"
@@ -252,7 +252,7 @@
                             
                             [tableViewCells addObject:cell];
                         }
-
+                        
                     } @catch (NSException *exception) {
                         NSLog(@"Caught Exception\n\n%@\n", exception);
                     }

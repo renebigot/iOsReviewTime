@@ -2,8 +2,8 @@
 //  BRReviewTimeViewController.h
 //  iosReviewTime
 //
-//  Created by iRare Media on 12/20/13.
-//  Copyright (c) 2013 iRare Media. All rights reserved.
+//  Created by René Bigot on 14/10/12.
+//  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved.
 //
 
 #import "NSDate+Calendar.h"

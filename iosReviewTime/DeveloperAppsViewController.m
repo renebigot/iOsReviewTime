@@ -8,6 +8,10 @@
 
 #import "DeveloperAppsViewController.h"
 
+@interface DeveloperAppsViewController () {
+    BOOL didPresentLogin;
+} @end
+
 @implementation DeveloperAppsViewController
 @synthesize developerName, tableViewCells, dictionaryData, appURLs;
 @synthesize loginView, activityIndicator, tableview;
@@ -17,18 +21,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    didPresentLogin = NO;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     developerName = [FDKeychain itemForKey:@"developerName" forService:@"iOSReviewTime" error:nil];
     
-    if (developerName != NULL) {
-        loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
-        [self refreshApps];
+    if (didPresentLogin) {
+        if (developerName != NULL) {
+            loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
+            [self refreshApps];
+        }
     } else {
-        loginButton.title = NSLocalizedString(@"Login", @"Button Title");
-        [self performSelector:@selector(login) withObject:nil afterDelay:1.0];
+        if (developerName != NULL) {
+            loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
+            [self refreshApps];
+        } else {
+            loginButton.title = NSLocalizedString(@"Login", @"Button Title");
+            [self performSelector:@selector(login) withObject:nil afterDelay:1.0];
+        }
     }
 }
 
@@ -39,6 +53,7 @@
 #pragma mark - Login
 
 - (IBAction)login {
+    didPresentLogin = YES;
     [self performSegueWithIdentifier:@"login" sender:self];
 }
 

@@ -2,8 +2,8 @@
 //  LoginViewController.m
 //  iOS Review Time
 //
-//  Created by The Spencer Family on 12/21/13.
-//  Copyright (c) 2013 René Bigot. All rights reserved.
+//  Created by René Bigot on 14/10/12.
+//  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved.
 //
 
 #import "LoginViewController.h"

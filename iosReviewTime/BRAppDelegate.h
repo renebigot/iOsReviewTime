@@ -2,8 +2,8 @@
 //  BRAppDelegate.h
 //  iOSReviewTime
 //
-//  Created by René Bigot on 14/10/12.
-//  Copyright (c) 2012 René Bigot. All rights reserved.
+//  Created by iRare Media on 12/26/13.
+//  Copyright (c) 2013 iRare Media. All rights reserved.
 //
 
 @interface BRAppDelegate : UIResponder <UIApplicationDelegate>

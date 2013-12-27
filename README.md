@@ -1,5 +1,5 @@
 #iOS Review Time
-An iOS / Mac app for tracking the iOS AppStore review times. Collects crowdsourced data from Twitter using the [**#iosreviewtime**](https://twitter.com/search?q=%23iosreviewtime) hashtag.
+An iOS / Mac app for tracking the iOS AppStore review times. Collects crowdsourced data from Twitter using the [**#iosreviewtime**](https://twitter.com/search?q=%23iosreviewtime) hashtag. Coming soon to the iOS AppStore.
 
 <img width=700 src="https://github.com/iRareMedia/iOsReviewTime/blob/master/Screenshots/Screenshots.png?raw=true"/>
 
@@ -20,4 +20,4 @@ Light edition for OS X shows review time in OS X status bar. Runs on OS X 10.8 M
 Work in progress, star for updates and information. Stay tuned for more!
 
 ##License
-Available for license under the BSD License. Copyright © 2013, iRare Media. Copyright © 2012, RENE BIGOT. All rights reserved.
+Available for license under the BSD License. Copyright © 2012, RENE BIGOT. Copyright © 2013, iRare Media. All rights reserved.

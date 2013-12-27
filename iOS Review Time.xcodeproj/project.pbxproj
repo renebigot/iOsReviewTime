@@ -49,6 +49,10 @@
 		99B5EB8318316AC900A7FA50 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB8218316AC900A7FA50 /* MobileCoreServices.framework */; };
 		99B5EB8518316AF500A7FA50 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB8418316AF500A7FA50 /* Security.framework */; };
 		99B5EBA11831811C00A7FA50 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EBA01831811C00A7FA50 /* Accounts.framework */; };
+		99F3A882186DE82B00A21E11 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F3A881186DE82B00A21E11 /* MoreViewController.m */; };
+		99F3A885186DEB3B00A21E11 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F3A884186DEB3B00A21E11 /* StoreKit.framework */; };
+		99F3A888186DED1D00A21E11 /* LicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F3A887186DED1D00A21E11 /* LicenseViewController.m */; };
+		99F3A88B186DED3E00A21E11 /* PurchaseFetchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F3A88A186DED3E00A21E11 /* PurchaseFetchViewController.m */; };
 		A762612916348C68001149A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A762612716348C68001149A4 /* InfoPlist.strings */; };
 		A762612B16348C68001149A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A762612A16348C68001149A4 /* main.m */; };
 		A762612F16348C68001149A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A762612D16348C68001149A4 /* Credits.rtf */; };
@@ -161,6 +165,13 @@
 		99B5EB8418316AF500A7FA50 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		99B5EB8E1831776D00A7FA50 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		99B5EBA01831811C00A7FA50 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		99F3A880186DE82B00A21E11 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		99F3A881186DE82B00A21E11 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		99F3A884186DEB3B00A21E11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		99F3A886186DED1D00A21E11 /* LicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicenseViewController.h; sourceTree = "<group>"; };
+		99F3A887186DED1D00A21E11 /* LicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicenseViewController.m; sourceTree = "<group>"; };
+		99F3A889186DED3E00A21E11 /* PurchaseFetchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseFetchViewController.h; sourceTree = "<group>"; };
+		99F3A88A186DED3E00A21E11 /* PurchaseFetchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseFetchViewController.m; sourceTree = "<group>"; };
 		A762611C16348C68001149A4 /* iRT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A762612616348C68001149A4 /* iRT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRT-Info.plist"; sourceTree = "<group>"; };
 		A762612816348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -218,6 +229,7 @@
 				A7F4DB92162B632400B98088 /* UIKit.framework in Frameworks */,
 				A7F4DB94162B632400B98088 /* Foundation.framework in Frameworks */,
 				A7F4DB96162B632400B98088 /* CoreGraphics.framework in Frameworks */,
+				99F3A885186DEB3B00A21E11 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,13 +330,6 @@
 			path = "NSDate Extensions";
 			sourceTree = "<group>";
 		};
-		99B2B93718677B6300F0E456 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
-			sourceTree = "<group>";
-		};
 		A762612016348C68001149A4 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,7 +379,6 @@
 		A7F4DB82162B632400B98088 = {
 			isa = PBXGroup;
 			children = (
-				99B2B93718677B6300F0E456 /* iPad */,
 				9995C2A11866A35D00A43BFD /* LICENSE.md */,
 				9995C2A21866A35D00A43BFD /* README.md */,
 				9995C2A31866A35D00A43BFD /* Screenshots */,
@@ -398,6 +402,7 @@
 		A7F4DB90162B632400B98088 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99F3A884186DEB3B00A21E11 /* StoreKit.framework */,
 				9995C29F1866985800A43BFD /* Social.framework */,
 				9995C29D1866984A00A43BFD /* Accounts.framework */,
 				99B5EBA01831811C00A7FA50 /* Accounts.framework */,
@@ -430,6 +435,12 @@
 				A7E494FA162CA40900F34B63 /* DeveloperAppsViewController.m */,
 				9949AB5A1865F477003C60D1 /* LoginViewController.h */,
 				9949AB5B1865F478003C60D1 /* LoginViewController.m */,
+				99F3A880186DE82B00A21E11 /* MoreViewController.h */,
+				99F3A881186DE82B00A21E11 /* MoreViewController.m */,
+				99F3A886186DED1D00A21E11 /* LicenseViewController.h */,
+				99F3A887186DED1D00A21E11 /* LicenseViewController.m */,
+				99F3A889186DED3E00A21E11 /* PurchaseFetchViewController.h */,
+				99F3A88A186DED3E00A21E11 /* PurchaseFetchViewController.m */,
 				A7F4DB98162B632400B98088 /* Supporting Files */,
 			);
 			name = "iOS Review Time - iOS";
@@ -479,6 +490,7 @@
 				A7F4DB89162B632400B98088 /* Sources */,
 				A7F4DB8A162B632400B98088 /* Frameworks */,
 				A7F4DB8B162B632400B98088 /* Resources */,
+				99F3A883186DEB2000A21E11 /* Version Script */,
 			);
 			buildRules = (
 			);
@@ -502,6 +514,17 @@
 					A762611B16348C68001149A4 = {
 						SystemCapabilities = {
 							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					A7F4DB8C162B632400B98088 = {
+						DevelopmentTeam = 243F4RK8Z3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
 						};
@@ -554,6 +577,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		99F3A883186DEB2000A21E11 /* Version Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Version Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A762611816348C68001149A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -576,6 +616,7 @@
 				99A724AC1867875C0062A2D3 /* NSDate+Components.m in Sources */,
 				A7F4DBA2162B632400B98088 /* BRAppDelegate.m in Sources */,
 				A7F4DBAB162B632400B98088 /* BRReviewTimeViewController.m in Sources */,
+				99F3A88B186DED3E00A21E11 /* PurchaseFetchViewController.m in Sources */,
 				9949AB8C18660954003C60D1 /* UIAlertView+AFNetworking.m in Sources */,
 				99A724AF1867875C0062A2D3 /* NSDate+Month.m in Sources */,
 				A7F4DBC8162C614A00B98088 /* BRTweetCell.m in Sources */,
@@ -598,7 +639,9 @@
 				9949AB721865FB85003C60D1 /* AFHTTPRequestOperationManager.m in Sources */,
 				9949AB9018660954003C60D1 /* UIWebView+AFNetworking.m in Sources */,
 				994BB5A0186552B0005F9EAE /* FDKeychain.m in Sources */,
+				99F3A888186DED1D00A21E11 /* LicenseViewController.m in Sources */,
 				9949AB751865FB85003C60D1 /* AFSecurityPolicy.m in Sources */,
+				99F3A882186DE82B00A21E11 /* MoreViewController.m in Sources */,
 				9949AB5C1865F478003C60D1 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -774,11 +817,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosReviewTime/iOS Review Time-Prefix.pch";
 				INFOPLIST_FILE = "iosReviewTime/iOS Review Time-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -792,11 +838,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosReviewTime/iOS Review Time-Prefix.pch";
 				INFOPLIST_FILE = "iosReviewTime/iOS Review Time-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
