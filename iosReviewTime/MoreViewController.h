@@ -8,10 +8,23 @@
 
 #import <MessageUI/MessageUI.h>
 
+static const NSInteger ONE_DAY_IN_SECONDS = 86400;
+static const NSInteger FIVE_DAYS_IN_SECONDS = 432000;
+static const NSInteger SEVEN_DAYS_IN_SECONDS = 604800;
+static const NSInteger FOURTEEN_DAYS_IN_SECONDS = 1209600;
+
 @interface MoreViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISwitch *appBadgeSwitch;
 - (IBAction)appBadgeSettingChanged:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *dateRangeSegment;
+- (IBAction)dateRangeDidChange:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UISlider *tweetSlider;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfTweetsLabel;
+- (IBAction)tweetNumberIsChanging:(id)sender;
+- (IBAction)tweetNumberDidChange:(id)sender;
 
 - (IBAction)contact:(id)sender;
 - (IBAction)viewWebsite;

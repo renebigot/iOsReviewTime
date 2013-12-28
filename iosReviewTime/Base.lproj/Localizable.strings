@@ -86,3 +86,6 @@
 
 /* Number of Days Display */
 "X days" = "X days";
+
+/* Background Fetch Notification */
+"Current iOS Review Time is %i days." = "Current iOS Review Time is %i days.";

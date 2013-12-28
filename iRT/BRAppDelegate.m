@@ -60,7 +60,7 @@
     [alert setMessageText:@"No Twitter Accounts"];
     [alert setInformativeText:@"There are no Twitter accounts configured. You can add or create a Twitter account in System Preferences."];
     [alert addButtonWithTitle:@"Okay"];
-    
+    [alert setAlertStyle:NSInformationalAlertStyle];
     [alert runModal];
 }
 
@@ -75,25 +75,44 @@
     
     tweetsCount = [NSDecimalNumber zero];
     
-    ACAccountType *twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    ACAccountType *twitterAccountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     
     // Authenticate the account
-    [self.accountStore requestAccessToAccountsWithType:twitterAccountType options:NULL completion:^(BOOL granted, NSError *error) {
+    [accountStore requestAccessToAccountsWithType:twitterAccountType options:NULL completion:^(BOOL granted, NSError *error) {
         // Create search parameters
-        NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":@"50", @"result_type":@"mixed"};
-        apiURL = [NSURL URLWithString:@"https://api.twitter.com/1.1/"];
+        NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":@"100", @"result_type":@"mixed"};
         
         // Request results from the Twitter API
-        SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[self.apiURL URLByAppendingPathComponent:@"search/tweets.json"] parameters:parameters];
+        SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[apiURL URLByAppendingPathComponent:@"search/tweets.json"] parameters:parameters];
         
         // Use the last Twitter account
         NSArray *twitterAccounts = [self.accountStore accountsWithAccountType:twitterAccountType];
         request.account = twitterAccounts.lastObject;
         
+        
+        [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+            if (responseData) {
+                NSError *jsonError;
+                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonError];
+                if (jsonError) return;
+                
+                self.results = dict[@"statuses"];
+                
+                [self parseTweetsFromArray:results completion:^(NSError *error) {
+                    if (error) {
+                        NSLog(@"Parsing Error: %@", error);
+                        [statusMenuItem setTitle:@"Error"];
+                        return;
+                    }
+                }];
+            }
+        }];
+        
+        
         // Disptach on main thread
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.connection = [[NSURLConnection alloc] initWithRequest:[request preparedURLRequest] delegate:self];
-        });
+        // dispatch_async(dispatch_get_main_queue(), ^{
+        // self.connection = [[NSURLConnection alloc] initWithRequest:[request preparedURLRequest] delegate:self];
+        // });
     }];
     
 }
@@ -101,6 +120,8 @@
 - (void)parseTweetsFromArray:(NSArray *)array completion:(void (^)(NSError *error))completionBlock {
     NSError *error = nil;
     
+    
+    // Setup a Date Formatter to filter tweets by date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     [dateFormatter setLocale:usLocale];
@@ -108,33 +129,31 @@
     [dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [dateFormatter setDateFormat:@"EEE, d LLL yyyy HH:mm:ss Z"];
     
-    NSDate *lastWeek = [[NSDate date] dateByAddingTimeInterval:-168 * 60 * 60];
+    NSDate *lastWeek = [[NSDate date] dateByAddingTimeInterval:-604800];
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"([0-9]*) day" options:NSRegularExpressionCaseInsensitive error:&error];
     NSDecimalNumber *averageDaysCount = [NSDecimalNumber zero];
     
-    if (error) {
-        completionBlock(error);
-        return;
-    }
+    if (error) return;
     
     for (NSDictionary *tweet in array) {
         NSDate *tweetDate = [dateFormatter dateFromString:[tweet objectForKey:@"created_at"]];
         if ([tweetDate compare:lastWeek] <= NSOrderedDescending) {
             NSString *tweetText = [tweet objectForKey:@"text"];
-            
+            NSLog(@"Tweet: %@", tweetText);
             NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:tweetText options:0 range:NSMakeRange(0, [tweetText length])];
             
-            if (NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
-                if (![[tweet objectForKey:@"from_user"] isEqualToString:@"appreviewtimes"]) {
-
-                        NSString *substringForFirstMatch = [tweetText substringWithRange:rangeOfFirstMatch];
-                        NSDecimalNumber *daysCount = [NSDecimalNumber decimalNumberWithString:substringForFirstMatch];
+            if ((!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) && (![[tweet objectForKey:@"from_user"] isEqualToString:@"appreviewtimes"])) {
+                @try {
+                    NSString *substringForFirstMatch = [tweetText substringWithRange:rangeOfFirstMatch];
+                    NSDecimalNumber *daysCount = [NSDecimalNumber decimalNumberWithString:substringForFirstMatch];
+                    
+                    if (![daysCount isEqual:[NSDecimalNumber notANumber]]) {
+                        averageDaysCount = [averageDaysCount decimalNumberByAdding:daysCount];
                         
-                        if (![daysCount isEqual:[NSDecimalNumber notANumber]]) {
-                            averageDaysCount = [averageDaysCount decimalNumberByAdding:daysCount];
-                            
-                            tweetsCount = [tweetsCount decimalNumberByAdding:[NSDecimalNumber one]];
-                        }
+                        tweetsCount = [tweetsCount decimalNumberByAdding:[NSDecimalNumber one]];
+                    }
+                } @catch (NSException *exception) {
+                    NSLog(@"Caught Exception\n\n%@\n", exception);
                 }
             }
         }
@@ -142,6 +161,7 @@
     
     NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
     averageDaysCount = [averageDaysCount decimalNumberByDividingBy:tweetsCount withBehavior:roundingBehavior];
+    NSLog(@"Days: %@", averageDaysCount);
     
     [statusMenuItem setTitle:[NSString stringWithFormat:@"iOS RT: %@ days", averageDaysCount]];
     
@@ -167,7 +187,6 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"Connection: %@", connection);
     self.connection = nil;
     
     if (self.requestData) {
@@ -196,6 +215,5 @@
     self.connection = nil;
     self.requestData = nil;
 }
-
 
 @end

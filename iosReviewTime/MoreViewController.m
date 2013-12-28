@@ -22,9 +22,19 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    // Get User Defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     // Set the badge to display the correct setting
-    [self.appBadgeSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"badgeCount"] animated:YES];
+    [self.appBadgeSwitch setOn:[defaults boolForKey:@"badgeCount"] animated:YES];
+    
+    // Set the segment to show the correct setting
+    [self.dateRangeSegment setSelectedSegmentIndex:[self getIndexFromSeconds:[defaults integerForKey:@"dateRange"]]];
+    
+    // Set the slider to show the correct setting
+    [self.tweetSlider setValue:[defaults integerForKey:@"tweetNumber"] animated:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -32,6 +42,53 @@
 
 - (IBAction)appBadgeSettingChanged:(id)sender {
     [[NSUserDefaults standardUserDefaults] setBool:self.appBadgeSwitch.isOn forKey:@"badgeCount"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)dateRangeDidChange:(id)sender {
+    /* Four Segements to choose:
+     0. 24 Hours = 86400 Seconds
+     1. 5 Days = 432000 Seconds
+     2. 7 Days = 604800 Seconds
+     3. 14 Days = 1209600 Seconds */
+    
+    // Get the selected segment number
+    NSInteger selectedSegement = self.dateRangeSegment.selectedSegmentIndex;
+    
+    // Save the appropriate number of seconds based on the selected segment
+    if (selectedSegement == 0) {
+        [[NSUserDefaults standardUserDefaults] setInteger:ONE_DAY_IN_SECONDS forKey:@"dateRange"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    } else if (selectedSegement == 1) {
+        [[NSUserDefaults standardUserDefaults] setInteger:FIVE_DAYS_IN_SECONDS forKey:@"dateRange"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    } else if (selectedSegement == 2) {
+        [[NSUserDefaults standardUserDefaults] setInteger:SEVEN_DAYS_IN_SECONDS forKey:@"dateRange"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    } else if (selectedSegement == 3) {
+        [[NSUserDefaults standardUserDefaults] setInteger:FOURTEEN_DAYS_IN_SECONDS forKey:@"dateRange"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+- (NSInteger)getIndexFromSeconds:(NSInteger)seconds {
+    if (seconds == ONE_DAY_IN_SECONDS) {
+        return 0;
+    } else if (seconds == FIVE_DAYS_IN_SECONDS) {
+        return 1;
+    } else if (seconds == SEVEN_DAYS_IN_SECONDS) {
+        return 2;
+    } else if (seconds == FOURTEEN_DAYS_IN_SECONDS) {
+        return 3;
+    } else return 2;
+}
+
+- (IBAction)tweetNumberIsChanging:(id)sender {
+    self.numberOfTweetsLabel.text = [NSString stringWithFormat:@"%i tweets", (int)self.tweetSlider.value];
+}
+
+- (IBAction)tweetNumberDidChange:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setInteger:(int)self.tweetSlider.value forKey:@"tweetNumber"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

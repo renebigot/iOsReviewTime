@@ -50,7 +50,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"#iOSReviewTime Tweets";
+    return [NSString stringWithFormat:@"%i #iOSReviewTime Tweets", (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"tweetNumber"]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,7 +88,7 @@
         [statusLabel setText:NSLocalizedString(@"Querying Twitter", @"Status Text")];
         
         // Create search parameters
-        NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":@"100", @"result_type":@"mixed"};
+        NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":[NSString stringWithFormat:@"%i", (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"tweetNumber"]], @"result_type":@"mixed"};
         
         // Request results from the Twitter API
         SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[self.apiURL URLByAppendingPathComponent:@"search/tweets.json"] parameters:parameters];
@@ -209,7 +209,10 @@
     [dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [dateFormatter setDateFormat:@"EEE, d LLL yyyy HH:mm:ss Z"];
     
-    NSDate *lastWeek = [[NSDate date] dateByAddingTimeInterval:-168 * 60 * 60];
+    NSInteger timeInterval = [[NSUserDefaults standardUserDefaults] integerForKey:@"dateRange"];
+    if (!timeInterval) timeInterval = 604800;
+    
+    NSDate *lastWeek = [[NSDate date] dateByAddingTimeInterval:-timeInterval];
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"([0-9]*) day" options:NSRegularExpressionCaseInsensitive error:&error];
     NSDecimalNumber *averageDaysCount = [NSDecimalNumber zero];
     

@@ -80,3 +80,6 @@
 
 /* Number of Days Display */
 "X days" = "X días";
+
+/* Background Fetch Notification */
+"Current iOS Review Time is %i days." = "La corriente App Store tiempo de revisión es de %i días.";

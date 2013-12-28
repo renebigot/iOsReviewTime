@@ -27,6 +27,13 @@
     // Set the Background Fetch Interval to 24 Hours - This means that iOS will only attempt to fetch data once daily
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:86400];
     
+    // Register User Defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults objectForKey:@"tweetNumber"]) [defaults setInteger:100 forKey:@"tweetNumber"];
+    if (![defaults objectForKey:@"dateRange"]) [defaults setInteger:604800 forKey:@"dateRange"];
+    if (![defaults objectForKey:@"badgeCount"]) [defaults setBool:YES forKey:@"badgeCount"];
+    [defaults synchronize];
+    
     return YES;
 }
 
@@ -45,7 +52,7 @@
             
             // Deliver a notification about the review time
             UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-            localNotification.alertBody = [NSString stringWithFormat:@"Current iOS Review Time is %i days.", reviewTime];
+            localNotification.alertBody = [NSString stringWithFormat:NSLocalizedString(@"Current iOS Review Time is %i days.", nil), reviewTime];
             localNotification.soundName = UILocalNotificationDefaultSoundName;
             if ([[NSUserDefaults standardUserDefaults] boolForKey:@"badgeCount"] == YES)  localNotification.applicationIconBadgeNumber = reviewTime;
             [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
