@@ -136,7 +136,6 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     requestData = [NSMutableData data];
-    NSLog(@"Recieved Response: %@", response);
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -197,6 +196,8 @@
     
     // Ensure that our table view gets the new data.
     [tableview reloadData];
+    [tableview setContentInset:UIEdgeInsetsMake(0., 0., 50., 0.)];
+    [tableview setScrollIndicatorInsets:UIEdgeInsetsMake(0., 0., 50., 0.)];
     [tableview flashScrollIndicators];
 }
 
@@ -208,6 +209,8 @@
     self.requestData = nil;
     
     [tableview reloadData];
+    [tableview setScrollIndicatorInsets:UIEdgeInsetsMake(0., 0., 50., 0.)];
+    [tableview setContentInset:UIEdgeInsetsMake(0., 0., 50., 0.)];
 }
 
 #pragma mark - Parsing Tweets
@@ -261,7 +264,7 @@
                             // Get the tweet text, user and URL
                             cell.tweetUser.text = [NSString stringWithFormat:@"%@ @%@", [user objectForKey:@"name"], [user objectForKey:@"screen_name"]];
                             cell.tweetText.text = [tweet objectForKey:@"text"];
-                            cell.tweetUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://mobile.twitter.com/%@/%@", [tweet objectForKey:@"from_user"], [tweet objectForKey:@"id_str"]]];
+                            cell.tweetUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://mobile.twitter.com/%@/statuses/%@", [tweet objectForKey:@"screen_name"], [tweet objectForKey:@"id_str"]]];
                             
                             // Get the high resolution profile picture
                             [cell downloadAvatar:[NSURL URLWithString:[[user objectForKey:@"profile_image_url"] stringByReplacingOccurrencesOfString:@"_normal" withString:@""]]];
@@ -282,10 +285,17 @@
     
     [reviewTimeLabel setText:[NSString stringWithFormat:NSLocalizedString(@"%@ days", nil), averageDaysCount]];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"badgeCount"] == YES) [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[averageDaysCount intValue]];
-    else [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"badgeCount"] == YES) {
+        //Average rounded to the nearest integer
+        NSInteger average = [averageDaysCount floatValue] + .5;
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:average];
+    } else {
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    }
     
     [tableview reloadData];
+    [tableview setContentInset:UIEdgeInsetsMake(0., 0., 50., 0.)];
+    [tableview setScrollIndicatorInsets:UIEdgeInsetsMake(0., 0., 50., 0.)];
     
     if (error) {
         completionBlock(error);
