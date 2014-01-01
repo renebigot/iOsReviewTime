@@ -512,7 +512,7 @@
 						};
 					};
 					A7F4DB8C162B632400B98088 = {
-						DevelopmentTeam = 243F4RK8Z3;
+						DevelopmentTeam = 5L7L2PJBYZ;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
