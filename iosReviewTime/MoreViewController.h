@@ -8,10 +8,12 @@
 
 #import <MessageUI/MessageUI.h>
 
+#import "FDKeychain.h"
+#define PRODUCT_ID @"com.ReviewTime.BackgroundFetch"
+
 static const NSInteger ONE_DAY_IN_SECONDS = 86400;
 static const NSInteger FIVE_DAYS_IN_SECONDS = 432000;
 static const NSInteger SEVEN_DAYS_IN_SECONDS = 604800;
-static const NSInteger FOURTEEN_DAYS_IN_SECONDS = 1209600;
 
 @interface MoreViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 
@@ -30,5 +32,8 @@ static const NSInteger FOURTEEN_DAYS_IN_SECONDS = 1209600;
 - (IBAction)viewWebsite;
 - (IBAction)viewSupport;
 - (IBAction)viewVersionInfo;
+
+@property (weak, nonatomic) IBOutlet UITableViewCell *fetchNotPurchasedCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *fetchPurchasedCell;
 
 @end

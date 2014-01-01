@@ -16,7 +16,7 @@
 "Authenticating Twitter" = "Authenticating Twitter";
 
 /* Status Text */
-"Average review time for last 7 days" = "Average review time for last 7 days";
+"Average review time for the last %@" = "Average review time for the last %@";
 
 /* Status Text */
 "Connected to Twitter" = "Connected to Twitter";

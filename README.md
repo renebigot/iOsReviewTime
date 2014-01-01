@@ -1,5 +1,5 @@
 #iOS Review Time
-An iOS / Mac app for tracking the iOS AppStore review times. Collects crowdsourced data from Twitter using the [**#iosreviewtime**](https://twitter.com/search?q=%23iosreviewtime) hashtag. Coming soon to the iOS AppStore.
+An iOS / Mac app for tracking the iOS AppStore review times. Collects crowdsourced data from Twitter using the [**#iosreviewtime**](https://twitter.com/search?q=%23iosreviewtime) hashtag. Coming soon to the iOS AppStore this January.
 
 <img width=700 src="https://github.com/iRareMedia/iOsReviewTime/blob/master/Screenshots/Screenshots.png?raw=true"/>
 

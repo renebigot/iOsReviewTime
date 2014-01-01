@@ -8,6 +8,10 @@
 
 #import "NSDate+Calendar.h"
 
+static const NSInteger ONE_DAY_IN_SECONDS = 86400;
+static const NSInteger FIVE_DAYS_IN_SECONDS = 432000;
+static const NSInteger SEVEN_DAYS_IN_SECONDS = 604800;
+
 @interface BRReviewTimeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIBarPositioningDelegate, NSURLConnectionDelegate>
 
 @property (strong, nonatomic) ACAccountStore *accountStore;

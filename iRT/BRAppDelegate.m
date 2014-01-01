@@ -25,6 +25,9 @@
     // Grab the system's account store
     if (!accountStore) accountStore = [[ACAccountStore alloc] init];
     
+    // Set the Tweets Count to zero - basically to initialize it
+    tweetsCount = [NSDecimalNumber zero];
+    
     // Check for Twitter Access
     [self hasTwitterAccess:^(BOOL hasAcces) {
         if (hasAcces) [self refreshTweets];
@@ -73,14 +76,12 @@
         }
     }];
     
-    tweetsCount = [NSDecimalNumber zero];
-    
     ACAccountType *twitterAccountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     
     // Authenticate the account
     [accountStore requestAccessToAccountsWithType:twitterAccountType options:NULL completion:^(BOOL granted, NSError *error) {
         // Create search parameters
-        NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":@"100", @"result_type":@"mixed"};
+        NSDictionary *parameters = @{@"q":@"#iosreviewtime", @"count":@"100", @"result_type":@"recent"};
         
         // Request results from the Twitter API
         SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[apiURL URLByAppendingPathComponent:@"search/tweets.json"] parameters:parameters];

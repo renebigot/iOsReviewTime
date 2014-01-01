@@ -32,7 +32,9 @@
     [self.dateRangeSegment setSelectedSegmentIndex:[self getIndexFromSeconds:[defaults integerForKey:@"dateRange"]]];
     
     // Set the slider to show the correct setting
-    [self.tweetSlider setValue:[defaults integerForKey:@"tweetNumber"] animated:YES];
+    int numberOfTweets = (int)[defaults integerForKey:@"tweetNumber"];
+    [self.tweetSlider setValue:numberOfTweets animated:YES];
+    [self.numberOfTweetsLabel setText:[NSString stringWithFormat:@"%i tweets", numberOfTweets]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +52,7 @@
      0. 24 Hours = 86400 Seconds
      1. 5 Days = 432000 Seconds
      2. 7 Days = 604800 Seconds
-     3. 14 Days = 1209600 Seconds */
+     3. 14 Days = 1209600 Seconds !! Twitter API only returns up to 9 days back !! */
     
     // Get the selected segment number
     NSInteger selectedSegement = self.dateRangeSegment.selectedSegmentIndex;
@@ -65,9 +67,6 @@
     } else if (selectedSegement == 2) {
         [[NSUserDefaults standardUserDefaults] setInteger:SEVEN_DAYS_IN_SECONDS forKey:@"dateRange"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-    } else if (selectedSegement == 3) {
-        [[NSUserDefaults standardUserDefaults] setInteger:FOURTEEN_DAYS_IN_SECONDS forKey:@"dateRange"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
@@ -78,8 +77,6 @@
         return 1;
     } else if (seconds == SEVEN_DAYS_IN_SECONDS) {
         return 2;
-    } else if (seconds == FOURTEEN_DAYS_IN_SECONDS) {
-        return 3;
     } else return 2;
 }
 
@@ -129,7 +126,7 @@
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSString *minorVersion = [infoDictionary objectForKey:@"CFBundleVersion"];
-    return [NSString stringWithFormat:@"Version %@ (build %@). Updated on December 27, 2013.", majorVersion, minorVersion];
+    return [NSString stringWithFormat:@"Version %@ (build %@).\nUpdated on January 1, 2014.", majorVersion, minorVersion];
 }
 
 @end

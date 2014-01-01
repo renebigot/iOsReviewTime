@@ -24,8 +24,10 @@
 @implementation BRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Set the Background Fetch Interval to 24 Hours - This means that iOS will only attempt to fetch data once daily
-    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:86400];
+    if ([[FDKeychain itemForKey:PRODUCT_ID forService:@"iOSReviewTime" error:nil] isEqualToString:@"didPurchase"]) {
+        // Set the Background Fetch Interval to the minimum, that way we can fetch as often as the system wants to
+        [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    }
     
     // Register User Defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -38,7 +40,19 @@
 }
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"iOS Review Time: Background Fetch began");
+    
+    if (![FDKeychain itemForKey:PRODUCT_ID forService:@"iOSReviewTime" error:nil]) {
+        NSLog(@"iOS Review Time: Background Fetch not available because it was not purchased");
+        completionHandler(UIBackgroundFetchResultNoData);
+        return;
+    }
+    
+    // Set the Tweets Count to zero - basically to initialize it
+    tweetsCount = [NSDecimalNumber zero];
+    
     // Get Review Time data from Twitter
+    NSLog(@"iOS Review Time: Background Fetch is gathering data");
     [self updateReviewTimeWithCompletion:^(NSError *error) {
         if (error) {
             // Let UIApplication know that we've finished the background refresh
@@ -91,6 +105,8 @@
 #pragma mark - Parsing Tweets
 
 - (void)updateReviewTimeWithCompletion:(void (^)(NSError *error))completionHandler {
+    NSLog(@"iOS Review Time: Background Fetch data gathering is beginning");
+    
     // Set our API URL - 1.1 of the Twitter REST API
     if (!apiURL) apiURL = [NSURL URLWithString:@"https://api.twitter.com/1.1/"];
     
@@ -104,8 +120,10 @@
     
     // Authenticate the account
     [accountStore requestAccessToAccountsWithType:twitterAccountType options:NULL completion:^(BOOL granted, NSError *error) {
+        NSLog(@"iOS Review Time: Background Fetch successfully gained access to Twitter");
+        
         // Create search parameters
-        NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":@"100", @"result_type":@"mixed"};
+        NSDictionary *parameters = @{@"q":@"#iosreviewtime", @"count":@"100", @"result_type":@"recent"};
         
         // Request results from the Twitter API
         SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[apiURL URLByAppendingPathComponent:@"search/tweets.json"] parameters:parameters];
@@ -114,7 +132,11 @@
         NSArray *twitterAccounts = [accountStore accountsWithAccountType:twitterAccountType];
         request.account = twitterAccounts.lastObject;
         
-        [[NSURLSession sharedSession] dataTaskWithRequest:[request preparedURLRequest] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSLog(@"iOS Review Time: Background Fetch is attempting to contact Twitter");
+        NSURLSession *session = [NSURLSession sharedSession];
+        NSURLSessionDataTask *task = [session dataTaskWithRequest:[request preparedURLRequest] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSLog(@"iOS Review Time: Background Fetch successfully contacted Twitter");
+            
             // Check for returned data
             if (!data) return;
             
@@ -140,6 +162,7 @@
             
             if (error) return;
             
+            NSLog(@"iOS Review Time: Background Fetch is parsing results");
             for (NSDictionary *tweet in results) {
                 NSDate *tweetDate = [dateFormatter dateFromString:[tweet objectForKey:@"created_at"]];
                 if ([tweetDate compare:lastWeek] <= NSOrderedDescending) {
@@ -168,6 +191,8 @@
             
             reviewTime = [averageDaysCount intValue];
             
+            NSLog(@"iOS Review Time: Background Fetch finished parsing results");
+            
             if (error) {
                 completionHandler(error);
                 return;
@@ -176,7 +201,15 @@
                 return;
             }
         }];
+        
+        // Resume the Task
+        [task resume];
+        
     }];
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
+    completionHandler(NSURLSessionResponseAllow);
 }
 
 @end

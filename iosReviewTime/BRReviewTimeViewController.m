@@ -50,7 +50,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"%i #iOSReviewTime Tweets", (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"tweetNumber"]];
+    return [NSString stringWithFormat:@"%i #iOSReviewTime Tweets", (int)[tableViewCells count]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,7 +88,8 @@
         [statusLabel setText:NSLocalizedString(@"Querying Twitter", @"Status Text")];
         
         // Create search parameters
-        NSDictionary *parameters = @{@"q":@"iosreviewtime", @"count":[NSString stringWithFormat:@"%i", (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"tweetNumber"]], @"result_type":@"mixed"};
+        NSDictionary *parameters = @{@"q":@"#iosreviewtime", @"count":[NSString stringWithFormat:@"%i", (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"tweetNumber"]], @"result_type":@"recent"};
+        NSLog(@"Tweets to gather: %@", [parameters objectForKey:@"count"]);
         
         // Request results from the Twitter API
         SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[self.apiURL URLByAppendingPathComponent:@"search/tweets.json"] parameters:parameters];
@@ -121,10 +122,21 @@
     [alert show];
 }
 
+- (NSString *)getTimeStringFromSeconds:(NSInteger)seconds {
+    if (seconds == ONE_DAY_IN_SECONDS) {
+        return @"day";
+    } else if (seconds == FIVE_DAYS_IN_SECONDS) {
+        return @"5 days";
+    } else if (seconds == SEVEN_DAYS_IN_SECONDS) {
+        return @"7 days";
+    } else return @"7 days";
+}
+
 #pragma mark - NSURLConnection Delegate
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     requestData = [NSMutableData data];
+    NSLog(@"Recieved Response: %@", response);
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -159,7 +171,7 @@
                 return;
             } else {
                 // Check to see if iTunes Connect is shutdown for the holidays
-                if ([self date:[NSDate date] isBetweenDate:[NSDate dateWithMonth:12 day:21] andDate:[NSDate dateWithMonth:12 day:28]]) {
+                if ([self date:[NSDate date] isBetweenDate:[NSDate dateWithMonth:12 day:22] andDate:[NSDate dateWithMonth:12 day:26]]) {
                     // iTunes Connect is shutdown, hide the app badge no matter what the user's setting is, and then display a warning about innaccuracy. The warning message is more detailed on the iPad becuase there is more space
                     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
                     
@@ -168,7 +180,8 @@
                     
                 } else {
                     // iTC is not shutdown for the winter holiday, just display the default text
-                    [statusLabel setText:NSLocalizedString(@"Average review time for last 7 days", @"Status Text")];
+                    NSString *time = [self getTimeStringFromSeconds:[[NSUserDefaults standardUserDefaults] integerForKey:@"dateRange"]];
+                    [statusLabel setText:[NSString stringWithFormat:NSLocalizedString(@"Average review time for the last %@", @"Status Text"), time]];
                 }
                 
                 [activityIndicator stopAnimating];

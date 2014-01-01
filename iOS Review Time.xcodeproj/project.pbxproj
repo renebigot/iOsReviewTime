@@ -53,6 +53,7 @@
 		99F3A888186DED1D00A21E11 /* LicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F3A887186DED1D00A21E11 /* LicenseViewController.m */; };
 		99F3A88B186DED3E00A21E11 /* PurchaseFetchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F3A88A186DED3E00A21E11 /* PurchaseFetchViewController.m */; };
 		99F3A891186E7E4100A21E11 /* MacIcon@2x.icns in Resources */ = {isa = PBXBuildFile; fileRef = 99F3A890186E7E4100A21E11 /* MacIcon@2x.icns */; };
+		99F3A895186E931A00A21E11 /* EBPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F3A894186E931A00A21E11 /* EBPurchase.m */; };
 		A762612916348C68001149A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A762612716348C68001149A4 /* InfoPlist.strings */; };
 		A762612B16348C68001149A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A762612A16348C68001149A4 /* main.m */; };
 		A762612F16348C68001149A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A762612D16348C68001149A4 /* Credits.rtf */; };
@@ -172,6 +173,8 @@
 		99F3A889186DED3E00A21E11 /* PurchaseFetchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseFetchViewController.h; sourceTree = "<group>"; };
 		99F3A88A186DED3E00A21E11 /* PurchaseFetchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseFetchViewController.m; sourceTree = "<group>"; };
 		99F3A890186E7E4100A21E11 /* MacIcon@2x.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "MacIcon@2x.icns"; sourceTree = "<group>"; };
+		99F3A893186E931A00A21E11 /* EBPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBPurchase.h; sourceTree = "<group>"; };
+		99F3A894186E931A00A21E11 /* EBPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBPurchase.m; sourceTree = "<group>"; };
 		A762611C16348C68001149A4 /* iRT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A762612616348C68001149A4 /* iRT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRT-Info.plist"; sourceTree = "<group>"; };
 		A762612816348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -330,6 +333,15 @@
 			path = "NSDate Extensions";
 			sourceTree = "<group>";
 		};
+		99F3A892186E931A00A21E11 /* EBPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				99F3A893186E931A00A21E11 /* EBPurchase.h */,
+				99F3A894186E931A00A21E11 /* EBPurchase.m */,
+			);
+			path = EBPurchase;
+			sourceTree = "<group>";
+		};
 		A762612016348C68001149A4 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +463,7 @@
 		A7F4DB98162B632400B98088 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99F3A892186E931A00A21E11 /* EBPurchase */,
 				99A724991867875C0062A2D3 /* NSDate Extensions */,
 				9949AB5D1865FB85003C60D1 /* AFNetworking */,
 				994BB59C186552B0005F9EAE /* FDKeychain */,
@@ -637,6 +650,7 @@
 				9949AB771865FB85003C60D1 /* AFURLRequestSerialization.m in Sources */,
 				9949AB761865FB85003C60D1 /* AFURLConnectionOperation.m in Sources */,
 				9949AB721865FB85003C60D1 /* AFHTTPRequestOperationManager.m in Sources */,
+				99F3A895186E931A00A21E11 /* EBPurchase.m in Sources */,
 				9949AB9018660954003C60D1 /* UIWebView+AFNetworking.m in Sources */,
 				994BB5A0186552B0005F9EAE /* FDKeychain.m in Sources */,
 				99F3A888186DED1D00A21E11 /* LicenseViewController.m in Sources */,

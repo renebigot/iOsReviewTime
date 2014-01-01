@@ -6,8 +6,19 @@
 //  Copyright (c) 2013 iRare Media. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import "EBPurchase.h"
+#import "FDKeychain.h"
 
-@interface PurchaseFetchViewController : UIViewController
+#define PRODUCT_ID @"com.ReviewTime.BackgroundFetch"
+
+@interface PurchaseFetchViewController : UIViewController <EBPurchaseDelegate, MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *purchaseButton;
+
+- (IBAction)done:(id)sender;
+- (IBAction)purchase:(id)sender;
+- (IBAction)restorePurchase:(id)sender;
 
 @end

@@ -236,7 +236,6 @@
                                                         <segment title="24 Hours"/>
                                                         <segment title="5 Days"/>
                                                         <segment title="7 Days"/>
-                                                        <segment title="14 Days"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="dateRangeDidChange:" destination="Nt5-j2-oKX" eventType="valueChanged" id="W4Y-dS-bBy"/>
@@ -283,7 +282,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fmu-jg-XWn">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fmu-jg-XWn">
                                                     <rect key="frame" x="268" y="85" width="22" height="13"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -297,7 +296,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="20" maxValue="250" id="fEr-Xd-ygF">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="20" maxValue="100" id="fEr-Xd-ygF">
                                                     <rect key="frame" x="44" y="75" width="218" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
@@ -355,7 +354,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Version 2.3 | Updated Dec. 27, 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kaU-Dc-dO9">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Version 2.4 | Updated Dec. 31, 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kaU-Dc-dO9">
                                                     <rect key="frame" x="15" y="28" width="201" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -492,6 +491,7 @@
                     <connections>
                         <outlet property="appBadgeSwitch" destination="keb-HQ-C0R" id="9KY-nl-5L2"/>
                         <outlet property="dateRangeSegment" destination="WQO-an-Tea" id="R58-07-ce3"/>
+                        <outlet property="fetchNotPurchasedCell" destination="vWM-5B-Da5" id="8hw-MV-khw"/>
                         <outlet property="numberOfTweetsLabel" destination="AYy-v6-DkQ" id="bvw-CR-Ffq"/>
                         <outlet property="tweetSlider" destination="fEr-Xd-ygF" id="ffA-gn-Mgc"/>
                     </connections>
@@ -500,15 +500,15 @@
             </objects>
             <point key="canvasLocation" x="1163" y="1198"/>
         </scene>
-        <!--View Controller - Background Fetch-->
+        <!--Purchase Fetch View Controller - Background Fetch-->
         <scene sceneID="VCo-wu-oWB">
             <objects>
-                <viewController id="7Mv-LL-0rL" sceneMemberID="viewController">
+                <viewController id="7Mv-LL-0rL" customClass="PurchaseFetchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqY-BJ-5GO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="KJh-Fb-sVG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="KJh-Fb-sVG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -526,7 +526,7 @@ This feature uses iOS 7's Background Fetch to download content.</string>
                                         <rect key="frame" x="20" y="147" width="280" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lbI-LU-rOe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="lbI-LU-rOe">
                                         <rect key="frame" x="0.0" y="351" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.2901960784" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -534,8 +534,11 @@ This feature uses iOS 7's Background Fetch to download content.</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="purchase:" destination="7Mv-LL-0rL" eventType="touchUpInside" id="CAg-BK-lLv"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aWa-j2-Npw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="aWa-j2-Npw">
                                         <rect key="frame" x="0.0" y="399" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.2901960784" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -543,13 +546,27 @@ This feature uses iOS 7's Background Fetch to download content.</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="restorePurchase:" destination="7Mv-LL-0rL" eventType="touchUpInside" id="PHK-Ha-Chb"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have already purchased this item on another device, you will not be charged again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="968-RU-cfl">
+                                        <rect key="frame" x="20" y="447" width="280" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Background Fetch" id="37V-Td-GtO"/>
+                    <connections>
+                        <outlet property="purchaseButton" destination="lbI-LU-rOe" id="y5Y-QU-R1q"/>
+                        <outlet property="scrollView" destination="KJh-Fb-sVG" id="XjP-cl-SVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1F-4a-Kpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
