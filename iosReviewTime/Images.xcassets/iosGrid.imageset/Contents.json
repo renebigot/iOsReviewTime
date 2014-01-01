@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "iosGrid.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Fetch@2x.png"
+      "filename" : "iosGrid@2x.png"
     }
   ],
   "info" : {
