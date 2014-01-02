@@ -23,11 +23,16 @@
     [super viewDidLoad];
     
     didPresentLogin = NO;
+    developerNameOrId = [FDKeychain itemForKey:@"developerName" forService:@"iOSReviewTime" error:nil];
+    if (developerNameOrId != NULL) {
+        loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
+        [self refreshApps];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
+    [super viewDidAppear:animated];
+    
     developerNameOrId = [FDKeychain itemForKey:@"developerName" forService:@"iOSReviewTime" error:nil];
     
     if (didPresentLogin) {
@@ -37,10 +42,7 @@
                 [self refreshApps];
         }
     } else {
-        if (developerNameOrId != NULL) {
-            loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
-            [self refreshApps];
-        } else {
+        if (developerNameOrId == NULL) {
             loginButton.title = NSLocalizedString(@"Login", @"Button Title");
             [self performSelector:@selector(login) withObject:nil afterDelay:1.0];
         }
@@ -135,7 +137,7 @@
             // NSString *appID = [result objectForKey:@"bundleId"];
             NSString *appIcon = [result objectForKey:@"artworkUrl100"]; // Can also request a 60x60 px version or a 512x512 px version
             NSString *appURL = [result objectForKey:@"trackViewUrl"];
-
+            
             NSDictionary *tmpArtistDict = @{@"name": result[@"artistName"], @"id": [result[@"artistId"] stringValue]};
             if (!_developerScreenName) {
                 _developerScreenName = result[@"artistName"];
@@ -150,12 +152,12 @@
             UITableViewCell *cell = [self.tableview dequeueReusableCellWithIdentifier:CellIdentifier];
             if (cell == nil) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             
-//            [cell.imageView setImageWithURL:[NSURL URLWithString:appIcon]]; // placeholderImage:[UIImage imageNamed:@"appglobe"]];
+            // [cell.imageView setImageWithURL:[NSURL URLWithString:appIcon]]; // placeholderImage:[UIImage imageNamed:@"appglobe"]];
             cell.imageView.image = [UIImage imageNamed:@"iosGrid"];
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
             dispatch_async(queue, ^(void) {
                 NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:appIcon]];
-                UIImage* image = [[UIImage alloc] initWithData:imageData];
+                UIImage *image = [[UIImage alloc] initWithData:imageData];
                 if (image) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         cell.imageView.image = image;
