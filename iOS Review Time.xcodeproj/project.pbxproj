@@ -58,9 +58,9 @@
 		A762612F16348C68001149A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A762612D16348C68001149A4 /* Credits.rtf */; };
 		A762613216348C68001149A4 /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A762613116348C68001149A4 /* BRAppDelegate.m */; };
 		A762613516348C68001149A4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A762613316348C68001149A4 /* MainMenu.xib */; };
+		A7B30B911875D0A8001D2D88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B30B901875D0A8001D2D88 /* Images.xcassets */; };
 		A7E494FC162CA40900F34B63 /* DeveloperAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E494FA162CA40900F34B63 /* DeveloperAppsViewController.m */; };
 		A7E49501162CA76500F34B63 /* BRAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E49500162CA76500F34B63 /* BRAppCell.m */; };
-		A7E9CAF81874356C00955899 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E9CAF71874356C00955899 /* Images.xcassets */; };
 		A7F4DB92162B632400B98088 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB91162B632400B98088 /* UIKit.framework */; };
 		A7F4DB94162B632400B98088 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB93162B632400B98088 /* Foundation.framework */; };
 		A7F4DB96162B632400B98088 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DB95162B632400B98088 /* CoreGraphics.framework */; };
@@ -176,11 +176,11 @@
 		A762612E16348C68001149A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		A762613016348C68001149A4 /* BRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRAppDelegate.h; sourceTree = "<group>"; };
 		A762613116348C68001149A4 /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
+		A7B30B901875D0A8001D2D88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iosReviewTime/Images.xcassets; sourceTree = "<group>"; };
 		A7E494F9162CA40900F34B63 /* DeveloperAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeveloperAppsViewController.h; sourceTree = "<group>"; };
 		A7E494FA162CA40900F34B63 /* DeveloperAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeveloperAppsViewController.m; sourceTree = "<group>"; };
 		A7E494FF162CA76500F34B63 /* BRAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAppCell.h; sourceTree = "<group>"; };
 		A7E49500162CA76500F34B63 /* BRAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAppCell.m; sourceTree = "<group>"; };
-		A7E9CAF71874356C00955899 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iosReviewTime/Images.xcassets; sourceTree = "<group>"; };
 		A7F4DB8D162B632400B98088 /* iOSReviewTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSReviewTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F4DB91162B632400B98088 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7F4DB93162B632400B98088 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -375,7 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				99F3A890186E7E4100A21E11 /* MacIcon@2x.icns */,
-				A7E9CAF71874356C00955899 /* Images.xcassets */,
+				A7B30B901875D0A8001D2D88 /* Images.xcassets */,
 				A7F4DB97162B632400B98088 /* iOS Review Time - iOS */,
 				A762612416348C68001149A4 /* iOS Review Time - Mac */,
 				A7F4DB90162B632400B98088 /* Frameworks */,
@@ -562,7 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99B2B94118677FEF00F0E456 /* PadStoryboard.storyboard in Resources */,
-				A7E9CAF81874356C00955899 /* Images.xcassets in Resources */,
+				A7B30B911875D0A8001D2D88 /* Images.xcassets in Resources */,
 				992BD150186664BD001AD587 /* MainStoryboard.storyboard in Resources */,
 				992BD15D18666663001AD587 /* Localizable.strings in Resources */,
 			);
