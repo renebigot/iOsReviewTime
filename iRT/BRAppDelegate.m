@@ -16,7 +16,7 @@
 - (void)awakeFromNib {
     statusMenuItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusMenuItem setMenu:statusMenu];
-    [statusMenuItem setTitle:@"Loading"];
+    [statusMenuItem setTitle:NSLocalizedString(@"Loading", nil)];
     [statusMenuItem setHighlightMode:YES];
     
     // Set our API URL - 1.1 of the Twitter REST API
@@ -57,12 +57,12 @@
 }
 
 - (void)displayNoTwitterError {
-    [statusMenuItem setTitle:@"No Twitter"];
+    [statusMenuItem setTitle:NSLocalizedString(@"No Twitter", nil)];
     
     NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"No Twitter Accounts"];
-    [alert setInformativeText:@"There are no Twitter accounts configured. You can add or create a Twitter account in System Preferences."];
-    [alert addButtonWithTitle:@"Okay"];
+    [alert setMessageText:NSLocalizedString(@"No Twitter Accounts", @"Alert Title")];
+    [alert setInformativeText:NSLocalizedString(@"There are no Twitter accounts configured. You can add or create a Twitter account in Settings.", @"Alert Message")];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", nil)];
     [alert setAlertStyle:NSInformationalAlertStyle];
     [alert runModal];
 }
@@ -143,7 +143,7 @@
             NSLog(@"Tweet: %@", tweetText);
             NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:tweetText options:0 range:NSMakeRange(0, [tweetText length])];
             
-            if ((!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) && (![[tweet objectForKey:@"from_user"] isEqualToString:@"appreviewtimes"])) {
+            if ((!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) && (![[tweet objectForKey:@"screen_name"] isEqualToString:@"appreviewtimes"])) {
                 @try {
                     NSString *substringForFirstMatch = [tweetText substringWithRange:rangeOfFirstMatch];
                     NSDecimalNumber *daysCount = [NSDecimalNumber decimalNumberWithString:substringForFirstMatch];
@@ -164,7 +164,7 @@
     averageDaysCount = [averageDaysCount decimalNumberByDividingBy:tweetsCount withBehavior:roundingBehavior];
     NSLog(@"Days: %@", averageDaysCount);
     
-    [statusMenuItem setTitle:[NSString stringWithFormat:@"iOS RT: %@ days", averageDaysCount]];
+    [statusMenuItem setTitle:[NSString stringWithFormat:NSLocalizedString(@"iOS RT: %@ days", nil), averageDaysCount]];
     
     if (error) {
         completionBlock(error);
