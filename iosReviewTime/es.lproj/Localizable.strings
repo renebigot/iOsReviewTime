@@ -1,10 +1,8 @@
-/* 
-  Localizable.strings
+/* Localizable.strings
   iOS Review Time
 
   Created by iRare Media on 12/21/13.
-  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved.
-*/
+  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved. */
 
 /* No comment provided by engineer. */
 "%@ days" = "%@ días";
@@ -48,9 +46,6 @@
 /* Button Title */
 "Login" = "Iniciar";
 
-/* Button Title */
-"Logout" = "Salir";
-
 /* Time Display Label */
 "No Twitter" = "No Twitter";
 
@@ -61,7 +56,7 @@
 "No Twitter Accounts" = "No hay cuentas de Twitter";
 
 /* No comment provided by engineer. */
-"Okay" = "OK";
+"OK" = "OK";
 
 /* Status Text */
 "Querying Twitter" = "Búsqueda Twitter";
@@ -83,3 +78,4 @@
 
 /* Background Fetch Notification */
 "Current iOS Review Time is %i days." = "La corriente App Store tiempo de revisión es de %i días.";
+

@@ -1,10 +1,8 @@
-/* 
-  Localizable.strings
+/* Localizable.strings
   iOS Review Time
 
   Created by iRare Media on 12/21/13.
-  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved.
-*/
+  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved. */
 
 /* No comment provided by engineer. */
 "%@ days" = "%@ Jours";
@@ -48,9 +46,6 @@
 /* Button Title */
 "Login" = "Connexion";
 
-/* Button Title */
-"Logout" = "Déconnexion";
-
 /* Time Display Label */
 "No Twitter" = "Pas de Twitter";
 
@@ -61,10 +56,10 @@
 "No Twitter Accounts" = "Pas de comptes Twitter";
 
 /* No comment provided by engineer. */
-"Okay" = "OK";
+"OK" = "OK";
 
 /* Status Text */
-"Querying Twitter" = "Recherche Twitter";
+"Querying Twitter" = "Interrogation de Twitter";
 
 /* No comment provided by engineer. */
 "Review for %@ took XX days" = "Revue de l'application pour %@ a XX jours";
@@ -83,3 +78,103 @@
 
 /* Background Fetch Notification */
 "Current iOS Review Time is %i days." = "L'App Store temps d'examen actuel est de %i jours.";
+
+/* Button Title */
+"Search" = "Rechercher";
+
+/* iPhone Warning for iTC Holiday Shutdown */
+"iTC is shutdown until Dec 28. Review Times may be inaccurate." = "iTC est interrompu jusqu'au 28 décembre. Les temps de revue risque d'être imprécis";
+
+/* iPad Warning for iTC Holiday Shutdown */
+"iTunes Connect is Shutdown for the Winter Holiday until December 28. Review Times for this week may be inaccurate." = "iTC est interrompu jusqu'au 28 décembre. Les temps de revue risque d'être imprécis cette semaine";
+
+/* No comment provided by engineer. */
+"%i #iOSReviewTime Tweets" = "%i Tweets #iOSReviewTime";
+
+/* No comment provided by engineer. */
+"5 days" = "5 jours";
+
+/* No comment provided by engineer. */
+"7 days" = "7 jours";
+
+/* No comment provided by engineer. */
+"1 day" = "1 jour";
+
+/* No comment provided by engineer. */
+"Cancel" = "Annuler";
+
+/* No comment provided by engineer. */
+"Many results found for \"%@\" found. Which one do you want to use ?" = "Plusieurs résultats trouvés pour \"%@\". Lequel souhaitez-vous utiliser ?";
+
+/* No comment provided by engineer. */
+"A prior purchase transaction could not be found. To restore the purchased product, tap the Buy button. Paid customers will NOT be charged again, but the purchase will be restored." = "Aucun achat antérieur n'a pu être trouvé. Pour restaurer l'achat, tapez le bouton \"Acheter\". Vous ne serez pas refacturé si vous avez déjà effectué cet achat.";
+
+/* No comment provided by engineer. */
+"Allow Purchases" = "Autoriser les achats";
+
+/* No comment provided by engineer. */
+"Already Purchased" = "Déjà acheté";
+
+/* No comment provided by engineer. */
+"Buy %@ for %@" = "Acheter %@ pour %@";
+
+/* No comment provided by engineer. */
+"Contact Support" = "Contacter le support";
+
+/* No comment provided by engineer. */
+"Either you cancelled the request or Apple reported a transaction error. Please try again later, or contact us for assistance." = "Vous avez annulé la demande ou Apple a reporté une erreur dans la transaction. Merci d'essayer à nouveau plus tard, ou contacter nous pour  de l'assistance";
+
+/* No comment provided by engineer. */
+"Either you cancelled the request or your prior purchase could not be restored. Please try again later, or contact us for assistance." = "Vous avez annulé la demande ou un achat antérieur ne peut être restauré. Merci d'essayer à nouveau plus tard, ou contacter nous pour de l'assistance.";
+
+/* No comment provided by engineer. */
+"iOS Review Time" = "Temps de revue iOS";
+
+/* No comment provided by engineer. */
+"iOS RT: %@ days" = "iOS RT : %@ jours";
+
+/* No comment provided by engineer. */
+"Item Unavailable in the AppStore" = "Item non disponible dans l'AppStore";
+
+/* No comment provided by engineer. */
+"Loading" = "Chargement";
+
+/* No comment provided by engineer. */
+"Not Available" = "Non disponible";
+
+/* No comment provided by engineer. */
+"Purchase Disabled in Settings" = "Achats désactivé dans les paramètres";
+
+/* No comment provided by engineer. */
+"Purchase Stopped" = "Achat stoppé";
+
+/* No comment provided by engineer. */
+"Restore Issue" = "Erreur de restauration";
+
+/* No comment provided by engineer. */
+"Restore Stopped" = "Restauration stoppée";
+
+/* No comment provided by engineer. */
+"Thank You!" = "Merci !";
+
+/* No comment provided by engineer. */
+"This In-App Purchase item is not available in the AppStore at this time. Please try again later." = "Cet achat intégré n'est pas disponible dans l'AppStore pour le moment. Merci de réessayer plus tard.";
+
+/* No comment provided by engineer. */
+"This technical information helps us help you. Include it if you need support or are reporting a bug." = "Ces informations techniques nous aide à vous assister.\nIncluez les si vous avez besoin d'assitance ou si vous souhaitez reporter un bug.";
+
+/* No comment provided by engineer. */
+"Version %@ (build %@).\nUpdated on January 1, 2014." = "Version %@ (build %@). Mis à jour le 1er Janvier 2014.";
+
+/* No comment provided by engineer. */
+"You must first enable In-App Purchase in your iOS Settings before restoring a previous purchase." = "Vous devez d'abord activer les achats intégrés dans les préférences système avant de pouvoir restaurer un précédent achat.";
+
+/* No comment provided by engineer. */
+"You've already purchased this feature. You can turn it ON / OFF in iOS Settings > General > Background App Refresh" = "Vous avez déjà acheté cette fonctionnalité. Vous pouvez l'activer ou la désactiver dans les réglages systèmes.";
+
+/* No comment provided by engineer. */
+"Your purchase was restored and is now unlocked for your enjoyment!" = "Votre achat a été restauré et est désormais disponible pour votre plaisir !";
+
+/* No comment provided by engineer. */
+"Your purchase was successful is now unlocked for your enjoyment!" = "Votre achat réussi et est désormais disponible pour votre plaisir !";
+
