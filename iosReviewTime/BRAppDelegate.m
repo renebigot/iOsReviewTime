@@ -169,7 +169,7 @@
                     NSString *tweetText = [tweet objectForKey:@"text"];
                     NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:tweetText options:0 range:NSMakeRange(0, [tweetText length])];
                     
-                    if ((!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) && (![[tweet objectForKey:@"from_user"] isEqualToString:@"appreviewtimes"])) {
+                    if ((!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) && (![[tweet objectForKey:@"screen_name"] isEqualToString:@"appreviewtimes"])) {
                         @try {
                             NSString *substringForFirstMatch = [tweetText substringWithRange:rangeOfFirstMatch];
                             NSDecimalNumber *daysCount = [NSDecimalNumber decimalNumberWithString:substringForFirstMatch];
