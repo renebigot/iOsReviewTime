@@ -25,7 +25,7 @@
     didPresentLogin = NO;
     developerNameOrId = [FDKeychain itemForKey:@"developerName" forService:@"iOSReviewTime" error:nil];
     if (developerNameOrId != NULL) {
-        loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
+        loginButton.title = NSLocalizedString(@"Search", @"Button Title");
         [self refreshApps];
     }
 }
@@ -37,13 +37,13 @@
     
     if (didPresentLogin) {
         if (developerNameOrId != NULL) {
-            loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
+            loginButton.title = NSLocalizedString(@"Search", @"Button Title");
             if ([developerNameOrId integerValue] > 0)
                 [self refreshApps];
         }
     } else {
         if (developerNameOrId == NULL) {
-            loginButton.title = NSLocalizedString(@"Login", @"Button Title");
+            loginButton.title = NSLocalizedString(@"Search", @"Button Title");
             [self performSelector:@selector(login) withObject:nil afterDelay:1.0];
         }
     }
@@ -62,9 +62,9 @@
 
 - (void)didLoginUser {
     if (developerNameOrId != NULL) {
-        loginButton.title = NSLocalizedString(@"Logout", @"Button Title");
+        loginButton.title = NSLocalizedString(@"Search", @"Button Title");
     } else {
-        loginButton.title = NSLocalizedString(@"Login", @"Button Title");
+        loginButton.title = NSLocalizedString(@"Search", @"Button Title");
     }
     
     [self refreshApps];
@@ -185,7 +185,7 @@
         refreshButton.enabled = YES;
         
         if ([_developersArray count] > 1) {
-            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:@"Many results found for \"%@\" found. Which one do you want to use ?", developerNameOrId]
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Many results found for \"%@\" found. Which one do you want to use ?", nil), developerNameOrId]
                                                                      delegate:self
                                                             cancelButtonTitle:nil
                                                        destructiveButtonTitle:nil
@@ -193,7 +193,7 @@
             for (NSDictionary *developerDict in _developersArray) {
                 [actionSheet addButtonWithTitle:developerDict[@"name"]];
             }
-            [actionSheet addButtonWithTitle:@"Cancel"];
+            [actionSheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
             [actionSheet setCancelButtonIndex:[actionSheet numberOfButtons] - 1];
 
             didPresentLogin = YES;
