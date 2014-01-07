@@ -34,8 +34,12 @@
         // Assume the user has purchased this feature
         isPurchased = YES;
         purchaseButton.enabled = NO;
-        purchaseButton.titleLabel.text = @"Already Purchased";
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Already Purchased" message:@"You've already purchased this feature. You can turn it ON / OFF in iOS Settings > General > Background App Refresh" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        purchaseButton.titleLabel.text = NSLocalizedString(@"Already Purchased", nil);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Already Purchased", nil)
+                                                        message:NSLocalizedString(@"You've already purchased this feature. You can turn it ON / OFF in iOS Settings > General > Background App Refresh", nil)
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                              otherButtonTitles:nil];
         [alert show];
     }
 }
@@ -49,7 +53,8 @@
     // Request In-App Purchase product info and availability.
     if (![purchase requestProduct:PRODUCT_ID]) {
         // Returned NO, so notify user that In-App Purchase is Disabled in their Settings
-        [purchaseButton setTitle:@"Purchase Disabled in Settings" forState:UIControlStateNormal];
+        [purchaseButton setTitle:NSLocalizedString(@"Purchase Disabled in Settings", nil)
+                        forState:UIControlStateNormal];
     }
 }
 - (void)didReceiveMemoryWarning {
@@ -78,7 +83,11 @@
 
 - (void)displayAllowPurchaseAlert {
     // Returned NO, so notify user that In-App Purchase is Disabled in their Settings.
-    UIAlertView *settingsAlert = [[UIAlertView alloc] initWithTitle:@"Allow Purchases" message:@"You must first enable In-App Purchase in your iOS Settings before restoring a previous purchase." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    UIAlertView *settingsAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Allow Purchases", nil)
+                                                            message:NSLocalizedString(@"You must first enable In-App Purchase in your iOS Settings before restoring a previous purchase.", nil)
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                  otherButtonTitles:nil];
     [settingsAlert show];
 }
 
@@ -87,14 +96,18 @@
 - (void)contact {
     MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
     [mailComposer setMailComposeDelegate:self];
-    [mailComposer setToRecipients:@[@"contact@iraremedia.com"]];
+    [mailComposer setToRecipients:@[@"rene.bigot@brae.fr"]];
     [mailComposer setSubject:@"iOSRT iAP Issue"];
     
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSString *minorVersion = [infoDictionary objectForKey:@"CFBundleVersion"];
     
-    [mailComposer setMessageBody:[NSString stringWithFormat:@"<br /><br /><hr /><p style=\"color:grey;font-family:helvetica\">This technical information helps us help you. Include it if you need support or are reporting a bug.<br />Version %@ (%@)<br />iOS Version: %@</p><hr />", majorVersion, minorVersion, [UIDevice currentDevice].systemVersion] isHTML:YES];
+    [mailComposer setMessageBody:[NSString stringWithFormat:@"<br /><br /><hr /><p style=\"color:grey;font-family:helvetica\">%@<br />Version %@ (%@)<br />iOS Version: %@</p><hr />",
+                                  NSLocalizedString(@"This technical information helps us help you. Include it if you need support or are reporting a bug.", nil),
+                                  majorVersion,
+                                  minorVersion,
+                                  [UIDevice currentDevice].systemVersion] isHTML:YES];
     
     [self presentViewController:mailComposer animated:YES completion:nil];
 }
@@ -110,14 +123,20 @@
     
     if (productPrice != nil) {
         // Product is available, so update button title with price
-        [purchaseButton setTitle:[NSString stringWithFormat:@"Buy %@ for %@", productName, productPrice] forState:UIControlStateNormal];
+        [purchaseButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"Buy %@ for %@", nil), productName, productPrice]
+                        forState:UIControlStateNormal];
         purchaseButton.enabled = YES; // Enable buy button.
     } else {
         // Product is NOT available in the App Store, so notify user
         purchaseButton.enabled = NO; // Ensure buy button stays disabled.
-        [purchaseButton setTitle:@"Item Unavailable in the AppStore" forState:UIControlStateNormal];
+        [purchaseButton setTitle:NSLocalizedString(@"Item Unavailable in the AppStore", nil)
+                        forState:UIControlStateNormal];
         
-        UIAlertView *unavailAlert = [[UIAlertView alloc] initWithTitle:@"Not Available" message:@"This In-App Purchase item is not available in the AppStore at this time. Please try again later." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        UIAlertView *unavailAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Not Available", nil)
+                                                               message:NSLocalizedString(@"This In-App Purchase item is not available in the AppStore at this time. Please try again later.", nil)
+                                                              delegate:nil
+                                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                     otherButtonTitles:nil];
         [unavailAlert show];
     }
 }
@@ -139,10 +158,14 @@
         // 2 - Notify the user that the transaction was successful.
         
         NSString *alertMessage;
-        if (isRestore) alertMessage = @"Your purchase was restored and the Game Levels Pack is now unlocked for your enjoyment!"; // This was a Restore request
-        else alertMessage = @"Your purchase was successful and the Game Levels Pack is now unlocked for your enjoyment!"; // This was a Purchase request
+        if (isRestore) alertMessage = NSLocalizedString(@"Your purchase was restored and is now unlocked for your enjoyment!", nil); // This was a Restore request
+        else alertMessage = NSLocalizedString(@"Your purchase was successful is now unlocked for your enjoyment!", nil); // This was a Purchase request
         
-        UIAlertView *updatedAlert = [[UIAlertView alloc] initWithTitle:@"Thank You!" message:alertMessage delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        UIAlertView *updatedAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Thank You!", nil)
+                                                               message:alertMessage
+                                                              delegate:nil
+                                                     cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                     otherButtonTitles:nil];
         [updatedAlert show];
     }
 }
@@ -151,7 +174,11 @@
     NSLog(@"Failed to Purchase");
     
     // Purchase or Restore request failed or was cancelled, so notify the user
-    UIAlertView *failedAlert = [[UIAlertView alloc] initWithTitle:@"Purchase Stopped" message:@"Either you cancelled the request or Apple reported a transaction error. Please try again later, or contact us for assistance." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Contact Support", nil];
+    UIAlertView *failedAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Purchase Stopped", nil)
+                                                          message:NSLocalizedString(@"Either you cancelled the request or Apple reported a transaction error. Please try again later, or contact us for assistance.", nil)
+                                                         delegate:self
+                                                cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                otherButtonTitles:NSLocalizedString(@"Contact Support", nil), nil];
     [failedAlert show];
 }
 
@@ -161,7 +188,11 @@
     // Restore queue did not include any transactions, so either the user has not yet made a purchase or the user's prior purchase is unavailable, so notify user to make a purchase within the app.
     // If the user previously purchased the item, they will NOT be re-charged again, but it should restore their purchase.
     
-    UIAlertView *restoreAlert = [[UIAlertView alloc] initWithTitle:@"Restore Issue" message:@"A prior purchase transaction could not be found. To restore the purchased product, tap the Buy button. Paid customers will NOT be charged again, but the purchase will be restored." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    UIAlertView *restoreAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Restore Issue", nil)
+                                                           message:NSLocalizedString(@"A prior purchase transaction could not be found. To restore the purchased product, tap the Buy button. Paid customers will NOT be charged again, but the purchase will be restored.", nil)
+                                                          delegate:nil
+                                                 cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                 otherButtonTitles:nil];
     [restoreAlert show];
 }
 
@@ -169,14 +200,18 @@
     NSLog(@"Failed to Restore");
     
     // Restore request failed or was cancelled, so notify the user.
-    UIAlertView *failedAlert = [[UIAlertView alloc] initWithTitle:@"Restore Stopped" message:@"Either you cancelled the request or your prior purchase could not be restored. Please try again later, or contact us for assistance." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Contact Support", nil];
+    UIAlertView *failedAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Restore Stopped", nil)
+                                                          message:NSLocalizedString(@"Either you cancelled the request or your prior purchase could not be restored. Please try again later, or contact us for assistance.", nil)
+                                                         delegate:self
+                                                cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                otherButtonTitles:NSLocalizedString(@"Contact Support", nil), nil];
     [failedAlert show];
 }
 
 #pragma mark - Alert View
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Contact Support"]) {
+    if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:NSLocalizedString(@"Contact Support", nil)]) {
         [self contact];
     }
 }
