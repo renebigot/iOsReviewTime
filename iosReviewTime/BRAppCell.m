@@ -30,7 +30,7 @@
     connection = nil;
     _iconImageData = nil;
     
-    [[[UIAlertView alloc] initWithTitle:[error localizedDescription] message:[[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:[error localizedDescription] message:[[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     
     [self.activityIndicator setHidden:YES];
 }
