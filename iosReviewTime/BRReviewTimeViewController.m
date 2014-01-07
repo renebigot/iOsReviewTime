@@ -50,7 +50,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"%i #iOSReviewTime Tweets", (int)[tableViewCells count]];
+    return [NSString stringWithFormat:NSLocalizedString(@"%i #iOSReviewTime Tweets", nil), (int)[tableViewCells count]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,18 +118,22 @@
     [statusLabel setText:NSLocalizedString(@"No Twitter Access. Login in the Settings App", @"Time Display Label")];
     [reviewTimeLabel setText:NSLocalizedString(@"No Twitter", @"Time Display Label")];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Twitter Accounts", @"Alert Title") message:NSLocalizedString(@"There are no Twitter accounts configured. You can add or create a Twitter account in Settings.", @"Alert Message") delegate:nil cancelButtonTitle:NSLocalizedString(@"Okay", nil) otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Twitter Accounts", @"Alert Title")
+                                                    message:NSLocalizedString(@"There are no Twitter accounts configured. You can add or create a Twitter account in Settings.", @"Alert Message")
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                          otherButtonTitles:nil];
     [alert show];
 }
 
 - (NSString *)getTimeStringFromSeconds:(NSInteger)seconds {
     if (seconds == ONE_DAY_IN_SECONDS) {
-        return @"day";
+        return NSLocalizedString(@"1 day", nil);
     } else if (seconds == FIVE_DAYS_IN_SECONDS) {
-        return @"5 days";
+        return NSLocalizedString(@"5 days", nil);
     } else if (seconds == SEVEN_DAYS_IN_SECONDS) {
-        return @"7 days";
-    } else return @"7 days";
+        return NSLocalizedString(@"7 days", nil);
+    } else return NSLocalizedString(@"7 days", nil);
 }
 
 #pragma mark - NSURLConnection Delegate
@@ -245,7 +249,7 @@
             NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:tweetText options:0 range:NSMakeRange(0, [tweetText length])];
             
             if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
-                if (![[tweet objectForKey:@"from_user"] isEqualToString:@"appreviewtimes"]) {
+                if (![[tweet objectForKey:@"screen_name"] isEqualToString:@"appreviewtimes"]) {
                     @try {
                         NSString *substringForFirstMatch = [tweetText substringWithRange:rangeOfFirstMatch];
                         NSDecimalNumber *daysCount = [NSDecimalNumber decimalNumberWithString:substringForFirstMatch];
