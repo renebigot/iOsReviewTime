@@ -92,13 +92,17 @@
 - (IBAction)contact:(id)sender {
     MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
     [mailComposer setMailComposeDelegate:self];
-    [mailComposer setToRecipients:@[@"contact@iraremedia.com"]];
+    [mailComposer setToRecipients:@[@"rene.bigot@brae.fr"]];
     
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSString *minorVersion = [infoDictionary objectForKey:@"CFBundleVersion"];
     
-    [mailComposer setMessageBody:[NSString stringWithFormat:@"<br /><br /><hr /><p style=\"color:grey;font-family:helvetica\">This technical information helps us help you. Include it if you need support or are reporting a bug.<br />Version %@ (%@)<br />iOS Version: %@</p><hr />", majorVersion, minorVersion, [UIDevice currentDevice].systemVersion] isHTML:YES];
+    [mailComposer setMessageBody:[NSString stringWithFormat:@"<br /><br /><hr /><p style=\"color:grey;font-family:helvetica\">%@<br />Version %@ (%@)<br />iOS Version: %@</p><hr />",
+                                  NSLocalizedString(@"This technical information helps us help you. Include it if you need support or are reporting a bug.", nil),
+                                  majorVersion,
+                                  minorVersion,
+                                  [UIDevice currentDevice].systemVersion] isHTML:YES];
     
     [self presentViewController:mailComposer animated:YES completion:nil];
 }
@@ -119,14 +123,18 @@
 
 - (IBAction)viewVersionInfo {
     NSString *version = [self appNameAndVersionNumberDisplayString];
-    [[[UIAlertView alloc] initWithTitle:@"iOS Review Time" message:version delegate:nil cancelButtonTitle:NSLocalizedString(@"Okay", @"Alert Popup Button") otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"iOS Review Time", nil)
+                                message:version
+                               delegate:nil
+                      cancelButtonTitle:NSLocalizedString(@"OK", @"Alert Popup Button")
+                      otherButtonTitles:nil] show];
 }
 
 - (NSString *)appNameAndVersionNumberDisplayString {
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSString *minorVersion = [infoDictionary objectForKey:@"CFBundleVersion"];
-    return [NSString stringWithFormat:@"Version %@ (build %@).\nUpdated on January 1, 2014.", majorVersion, minorVersion];
+    return [NSString stringWithFormat:NSLocalizedString(@"Version %@ (build %@).\nUpdated on January 1, 2014.", nil), majorVersion, minorVersion];
 }
 
 @end
