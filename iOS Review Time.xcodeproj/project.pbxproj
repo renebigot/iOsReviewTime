@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		992BD150186664BD001AD587 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992BD152186664BD001AD587 /* MainStoryboard.storyboard */; };
 		992BD15D18666663001AD587 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 992BD15F18666663001AD587 /* Localizable.strings */; };
 		9949AB5C1865F478003C60D1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949AB5B1865F478003C60D1 /* LoginViewController.m */; };
 		9949AB711865FB85003C60D1 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949AB5F1865FB85003C60D1 /* AFHTTPRequestOperation.m */; };
@@ -37,7 +36,6 @@
 		99A724B01867875C0062A2D3 /* NSDate+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724A61867875C0062A2D3 /* NSDate+Time.m */; };
 		99A724B11867875C0062A2D3 /* NSDate+Week.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724A81867875C0062A2D3 /* NSDate+Week.m */; };
 		99A724B21867875C0062A2D3 /* NSDate+Year.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A724AA1867875C0062A2D3 /* NSDate+Year.m */; };
-		99B2B94118677FEF00F0E456 /* PadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B2B93C18677C1500F0E456 /* PadStoryboard.storyboard */; };
 		99B5EB561831429D00A7FA50 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB551831429D00A7FA50 /* Cocoa.framework */; };
 		99B5EB5B1831454400A7FA50 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB591831453900A7FA50 /* AppKit.framework */; };
 		99B5EB5D1831455000A7FA50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B5EB5C1831455000A7FA50 /* CoreData.framework */; };
@@ -70,21 +68,18 @@
 		A7F4DBBF162BDF8300B98088 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DBBE162BDF8300B98088 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7F4DBC1162BDF9200B98088 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4DBC0162BDF9200B98088 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7F4DBC8162C614A00B98088 /* BRTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F4DBC7162C614A00B98088 /* BRTweetCell.m */; };
+		A7F8A270187B743E009D7F0E /* PadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F8A26E187B743E009D7F0E /* PadStoryboard.storyboard */; };
+		A7F8A274187B7593009D7F0E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F8A276187B7593009D7F0E /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		992BD14E18665D61001AD587 /* iRT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iRT.entitlements; sourceTree = "<group>"; };
-		992BD14F186664B1001AD587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		992BD151186664BD001AD587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		992BD153186664CA001AD587 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		992BD154186664CA001AD587 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		992BD156186664CA001AD587 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		992BD157186664CA001AD587 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
-		992BD158186664D1001AD587 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		992BD159186664D2001AD587 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		992BD15B186664D2001AD587 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		992BD15C186664D2001AD587 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = es; path = es.lproj/Credits.rtf; sourceTree = "<group>"; };
-		992BD15E18666663001AD587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		992BD16118666665001AD587 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		992BD16218666667001AD587 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9949AB5A1865F477003C60D1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -145,9 +140,6 @@
 		99A724A81867875C0062A2D3 /* NSDate+Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Week.m"; sourceTree = "<group>"; };
 		99A724A91867875C0062A2D3 /* NSDate+Year.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Year.h"; sourceTree = "<group>"; };
 		99A724AA1867875C0062A2D3 /* NSDate+Year.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Year.m"; sourceTree = "<group>"; };
-		99B2B93B18677C1500F0E456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PadStoryboard.storyboard; sourceTree = "<group>"; };
-		99B2B93E18677C1D00F0E456 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/PadStoryboard.strings; sourceTree = "<group>"; };
-		99B2B94018677C1D00F0E456 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PadStoryboard.strings; sourceTree = "<group>"; };
 		99B5EB551831429D00A7FA50 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		99B5EB591831453900A7FA50 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		99B5EB5C1831455000A7FA50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
@@ -196,6 +188,10 @@
 		A7F4DBC0162BDF9200B98088 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A7F4DBC6162C614A00B98088 /* BRTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTweetCell.h; sourceTree = "<group>"; };
 		A7F4DBC7162C614A00B98088 /* BRTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTweetCell.m; sourceTree = "<group>"; };
+		A7F8A26F187B743E009D7F0E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/PadStoryboard.storyboard; sourceTree = "<group>"; };
+		A7F8A271187B744B009D7F0E /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/PadStoryboard.storyboard; sourceTree = "<group>"; };
+		A7F8A275187B7593009D7F0E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A7F8A277187B7597009D7F0E /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,10 +414,10 @@
 		A7F4DB97162B632400B98088 /* iOS Review Time - iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A7F8A276187B7593009D7F0E /* MainStoryboard.storyboard */,
+				A7F8A26E187B743E009D7F0E /* PadStoryboard.storyboard */,
 				A7F4DBA0162B632400B98088 /* BRAppDelegate.h */,
 				A7F4DBA1162B632400B98088 /* BRAppDelegate.m */,
-				992BD152186664BD001AD587 /* MainStoryboard.storyboard */,
-				99B2B93C18677C1500F0E456 /* PadStoryboard.storyboard */,
 				A7F4DBA9162B632400B98088 /* BRReviewTimeViewController.h */,
 				A7F4DBAA162B632400B98088 /* BRReviewTimeViewController.m */,
 				A7E494F9162CA40900F34B63 /* DeveloperAppsViewController.h */,
@@ -561,10 +557,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B2B94118677FEF00F0E456 /* PadStoryboard.storyboard in Resources */,
 				A7B30B911875D0A8001D2D88 /* Images.xcassets in Resources */,
-				992BD150186664BD001AD587 /* MainStoryboard.storyboard in Resources */,
 				992BD15D18666663001AD587 /* Localizable.strings in Resources */,
+				A7F8A274187B7593009D7F0E /* MainStoryboard.storyboard in Resources */,
+				A7F8A270187B743E009D7F0E /* PadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,34 +639,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		992BD152186664BD001AD587 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				992BD151186664BD001AD587 /* Base */,
-				992BD153186664CA001AD587 /* fr */,
-				992BD158186664D1001AD587 /* es */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
 		992BD15F18666663001AD587 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				992BD15E18666663001AD587 /* Base */,
 				992BD16118666665001AD587 /* fr */,
 				992BD16218666667001AD587 /* es */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		99B2B93C18677C1500F0E456 /* PadStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99B2B93B18677C1500F0E456 /* Base */,
-				99B2B93E18677C1D00F0E456 /* fr */,
-				99B2B94018677C1D00F0E456 /* es */,
-			);
-			name = PadStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		A762612716348C68001149A4 /* InfoPlist.strings */ = {
@@ -696,11 +671,28 @@
 		A762613316348C68001149A4 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				992BD14F186664B1001AD587 /* Base */,
 				992BD154186664CA001AD587 /* fr */,
 				992BD159186664D2001AD587 /* es */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A7F8A26E187B743E009D7F0E /* PadStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F8A26F187B743E009D7F0E /* en */,
+				A7F8A271187B744B009D7F0E /* fr */,
+			);
+			name = PadStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		A7F8A276187B7593009D7F0E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F8A275187B7593009D7F0E /* en */,
+				A7F8A277187B7597009D7F0E /* fr */,
+			);
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -710,7 +702,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = iRT/iRT.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -733,7 +724,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = iRT/iRT.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -1,23 +1,23 @@
 /* Class = "IBUINavigationItem"; title = "Background Fetch"; ObjectID = "0bp-VK-hbo"; */
-"0bp-VK-hbo.title" = "Téléchargement d'arrière plan";
+"0bp-VK-hbo.title" = "Background Fetch";
 
 /* Class = "IBUILabel"; text = "Support"; ObjectID = "4Rg-aF-PK6"; */
 "4Rg-aF-PK6.text" = "Support";
 
 /* Class = "IBUILabel"; text = "Background Fetch"; ObjectID = "4dI-ID-FFk"; */
-"4dI-ID-FFk.text" = "Téléchargement d'arrière plan";
+"4dI-ID-FFk.text" = "Background Fetch";
 
 /* Class = "IBUILabel"; text = "20"; ObjectID = "801-aZ-0Fo"; */
 "801-aZ-0Fo.text" = "20";
 
 /* Class = "IBUITabBarItem"; title = "Review Time"; ObjectID = "8NG-4s-qOn"; */
-"8NG-4s-qOn.title" = "Temps de revue";
+"8NG-4s-qOn.title" = "Review Time";
 
 /* Class = "IBUIButton"; normalTitle = "Purchase for $0.99"; ObjectID = "8XC-9E-Gag"; */
-"8XC-9E-Gag.normalTitle" = "Acheter pour 0.79€";
+"8XC-9E-Gag.normalTitle" = "Purchase for $0.99";
 
 /* Class = "IBUINavigationItem"; title = "More"; ObjectID = "9eT-98-jBG"; */
-"9eT-98-jBG.title" = "Paramètres";
+"9eT-98-jBG.title" = "Settings";
 
 /* Class = "IBUILabel"; text = "Version 2.4.1 | Updated Jan. 1, 2014"; ObjectID = "Bud-9U-qSN"; */
 "Bud-9U-qSN.text" = "Version 2.4.1 | Updated Jan. 1, 2014";
@@ -26,40 +26,40 @@
 "Ccm-NW-p7X.text" = "100";
 
 /* Class = "IBUINavigationItem"; title = "BSD License"; ObjectID = "FHu-Ve-6zY"; */
-"FHu-Ve-6zY.title" = "Licence BSD";
+"FHu-Ve-6zY.title" = "BSD License";
 
 /* Class = "IBUITableViewSection"; footerTitle = "Display the current iOS Review Time on your homescreen using an App Icon Badge."; ObjectID = "H76-Co-qzd"; */
-"H76-Co-qzd.footerTitle" = "Affiche le temps de validation courant pour l'AppStore iOS sur l'icône de l'application.";
+"H76-Co-qzd.footerTitle" = "Display the current iOS Review Time on your homescreen using an App Icon Badge.";
 
 /* Class = "IBUITableViewSection"; headerTitle = "Notifications"; ObjectID = "H76-Co-qzd"; */
 "H76-Co-qzd.headerTitle" = "Notifications";
 
 /* Class = "IBUILabel"; text = "License"; ObjectID = "ISA-Yt-A0U"; */
-"ISA-Yt-A0U.text" = "Licence";
+"ISA-Yt-A0U.text" = "License";
 
 /* Class = "IBUINavigationItem"; title = "FAQ"; ObjectID = "IXj-tu-kfJ"; */
 "IXj-tu-kfJ.title" = "FAQ";
 
 /* Class = "IBUITabBarItem"; title = "Apps"; ObjectID = "Iae-Mp-Y4O"; */
-"Iae-Mp-Y4O.title" = "Applications";
+"Iae-Mp-Y4O.title" = "Apps";
 
 /* Class = "IBUILabel"; text = "Based on iOsReviewTime by René BIGOT."; ObjectID = "IpE-Qp-Lg1"; */
-"IpE-Qp-Lg1.text" = "Basé sur iOsReviewTime de René BIGOT";
+"IpE-Qp-Lg1.text" = "Based on iOsReviewTime by René BIGOT.";
 
 /* Class = "IBUILabel"; text = "@appreviewtimes App Review"; ObjectID = "JBs-V7-JbG"; */
 "JBs-V7-JbG.text" = "@appreviewtimes App Review";
 
 /* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "KMw-nF-q2h"; */
-"KMw-nF-q2h.title" = "Annuler";
+"KMw-nF-q2h.title" = "Cancel";
 
 /* Class = "IBUILabel"; text = "GitHub.com/renebigot/iOsReviewTime/issues"; ObjectID = "OW5-d5-jdZ"; */
 "OW5-d5-jdZ.text" = "GitHub.com/renebigot/iOsReviewTime/issues";
 
 /* Class = "IBUILabel"; text = "Download iOS Review Times periodicially in the background. \n\nOnce content is downloaded, you'll get a notification about the latest review time. The app badge will also stay updated with the latest times.\n\nThis feature uses iOS 7's Background Fetch to download content."; ObjectID = "OdL-5Q-0Gf"; */
-"OdL-5Q-0Gf.text" = "Télécharger les temps de revue périodiquement en tâche de fond. Une fois le contenu téléchargé, vous recevrez une notification concernant le dernier temps de revue.\n\nCette fonctionnalité utilise le téléchargement d'arrière plan d'iOS 7.";
+"OdL-5Q-0Gf.text" = "Download iOS Review Times periodicially in the background. \n\nOnce content is downloaded, you'll get a notification about the latest review time. The app badge will also stay updated with the latest times.\n\nThis feature uses iOS 7's Background Fetch to download content.";
 
 /* Class = "IBUILabel"; text = "App Icon Badge"; ObjectID = "SgK-eA-mZI"; */
-"SgK-eA-mZI.text" = "Badge d'icône";
+"SgK-eA-mZI.text" = "App Icon Badge";
 
 /* Class = "IBUILabel"; text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma"; ObjectID = "WMr-r1-dLF"; */
 "WMr-r1-dLF.text" = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma";
@@ -67,111 +67,93 @@
 /* Class = "IBUITableViewSection"; headerTitle = "Information"; ObjectID = "XeZ-ng-wwL"; */
 "XeZ-ng-wwL.headerTitle" = "Information";
 
+/* Class = "IBUINavigationItem"; title = "Developer Login"; ObjectID = "YzY-6H-IaI"; */
+"YzY-6H-IaI.title" = "Developer Login";
+
 /* Class = "IBUILabel"; text = "Website"; ObjectID = "aCk-8g-X1U"; */
-"aCk-8g-X1U.text" = "Site Web";
+"aCk-8g-X1U.text" = "Website";
 
 /* Class = "IBUITextField"; placeholder = "Organization Name"; ObjectID = "aX7-0z-wrq"; */
-"aX7-0z-wrq.placeholder" = "Nom du développeur";
+"aX7-0z-wrq.placeholder" = "Organization Name";
 
 /* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "bN3-Wr-mbu"; */
-"bN3-Wr-mbu.text" = "Sous titre";
+"bN3-Wr-mbu.text" = "Subtitle";
 
 /* Class = "IBUILabel"; text = "GitHub.com/renebigot/iOsReviewTime"; ObjectID = "bNG-AJ-gVt"; */
 "bNG-AJ-gVt.text" = "GitHub.com/renebigot/iOsReviewTime";
 
 /* Class = "IBUISegmentedControl"; e0w-V0-of0.segmentTitles[0] = "24 Hours"; ObjectID = "e0w-V0-of0"; */
-"e0w-V0-of0.segmentTitles[0]" = "24 heures";
+"e0w-V0-of0.segmentTitles[0]" = "24 Hours";
 
 /* Class = "IBUISegmentedControl"; e0w-V0-of0.segmentTitles[1] = "5 Days"; ObjectID = "e0w-V0-of0"; */
-"e0w-V0-of0.segmentTitles[1]" = "5 jours";
+"e0w-V0-of0.segmentTitles[1]" = "5 Days";
 
 /* Class = "IBUISegmentedControl"; e0w-V0-of0.segmentTitles[2] = "7 Days"; ObjectID = "e0w-V0-of0"; */
-"e0w-V0-of0.segmentTitles[2]" = "7 jours";
+"e0w-V0-of0.segmentTitles[2]" = "7 Days";
 
 /* Class = "IBUITableViewSection"; headerTitle = "Review Time Settings"; ObjectID = "eO3-Yb-l8O"; */
-"eO3-Yb-l8O.headerTitle" = "Paramètres des temps de revue";
+"eO3-Yb-l8O.headerTitle" = "Review Time Settings";
 
 /* Class = "IBUILabel"; accessibilityLabel = "Number of Days for AppStore Review"; ObjectID = "fed-eI-B2N"; */
-"fed-eI-B2N.accessibilityLabel" = "Nombre de jours pour la validation sur l'AppStore";
+"fed-eI-B2N.accessibilityLabel" = "Number of Days for AppStore Review";
 
 /* Class = "IBUILabel"; text = "X Days"; ObjectID = "fed-eI-B2N"; */
-"fed-eI-B2N.text" = "X jours";
+"fed-eI-B2N.text" = "X Days";
 
 /* Class = "IBUILabel"; text = "FAQ"; ObjectID = "hhv-gN-5Xz"; */
 "hhv-gN-5Xz.text" = "FAQ";
 
 /* Class = "IBUILabel"; text = "Learn More about iOS Review Time"; ObjectID = "ilE-Wf-pho"; */
-"ilE-Wf-pho.text" = "A propos de iOS Review Time";
+"ilE-Wf-pho.text" = "Learn More about iOS Review Time";
 
 /* Class = "IBUINavigationItem"; title = "Background Fetch"; ObjectID = "mgp-on-vKW"; */
-"mgp-on-vKW.title" = "Téléchargement d'arrière plan";
+"mgp-on-vKW.title" = "Background Fetch";
 
 /* Class = "IBUIBarButtonItem"; title = "Contact"; ObjectID = "qH4-oh-ULf"; */
 "qH4-oh-ULf.title" = "Contact";
 
 /* Class = "IBUIBarButtonItem"; title = "Login"; ObjectID = "qIr-ai-CzH"; */
-"qIr-ai-CzH.title" = "Connexion";
+"qIr-ai-CzH.title" = "Login";
 
 /* Class = "IBUIButton"; normalTitle = "Restore Purchase"; ObjectID = "qOO-ym-DlZ"; */
-"qOO-ym-DlZ.normalTitle" = "Restaurer les achats";
+"qOO-ym-DlZ.normalTitle" = "Restore Purchase";
 
 /* Class = "IBUILabel"; text = "100 Tweets"; ObjectID = "qk5-gz-ZAC"; */
-"qk5-gz-ZAC.text" = "100 tweets";
+"qk5-gz-ZAC.text" = "100 Tweets";
 
 /* Class = "IBUINavigationItem"; title = "BSD License"; ObjectID = "r7w-KI-Jai"; */
-"r7w-KI-Jai.title" = "Licence BSD";
+"r7w-KI-Jai.title" = "BSD License";
 
 /* Class = "IBUILabel"; text = "Type the name of your iOS AppStore development company below. This is used to query the AppStore for all of your apps."; ObjectID = "rGX-he-NtA"; */
-"rGX-he-NtA.text" = "Tapez votre nom ou celui de votre société ci-dessous. Il est utilisé pour interroger l'AppStore pour réccupérer la liste de vos applications";
+"rGX-he-NtA.text" = "Type the name of your iOS AppStore development company below. This is used to query the AppStore for all of your apps.";
 
 /* Class = "IBUITableViewSection"; headerTitle = "Support"; ObjectID = "tJK-2t-0wu"; */
 "tJK-2t-0wu.headerTitle" = "Support";
 
 /* Class = "IBUINavigationItem"; title = "Developer Apps"; ObjectID = "vAv-7N-cJT"; */
-"vAv-7N-cJT.title" = "Applications";
+"vAv-7N-cJT.title" = "Developer Apps";
 
 /* Class = "IBUILabel"; text = "App Title"; ObjectID = "vtH-EQ-dIB"; */
-"vtH-EQ-dIB.text" = "Titre d'applications";
+"vtH-EQ-dIB.text" = "App Title";
 
 /* Class = "IBUILabel"; text = "Average review time for the last 7 days"; ObjectID = "wqO-15-Ty2"; */
-"wqO-15-Ty2.text" = "Temps de revue moyen pour les 7 derniers jours";
+"wqO-15-Ty2.text" = "Average review time for the last 7 days";
 
 /* Class = "IBUINavigationItem"; title = "iOS Review Time"; ObjectID = "x6X-bQ-yGc"; */
-"x6X-bQ-yGc.title" = "Temps de revue iOS";
+"x6X-bQ-yGc.title" = "iOS Review Time";
 
 /* Class = "IBUINavigationItem"; title = "BSD License"; ObjectID = "yQk-e9-W2S"; */
-"yQk-e9-W2S.title" = "Licence BSD";
+"yQk-e9-W2S.title" = "BSD License";
 
 /* Class = "IBUITextView"; text = "Apple, App Store, iOS and Mac are all trademarks of Apple Inc., registered in the U.S. and other countries.\n\nTwitter and Tweet are trademarks of Twitter, Inc. registered in the U.S. and other countries.\n\nThis software is distributed and available under the BSD License. This work is originally based off of the iOsReviewTime project by René BIGOT.\n\nThis is an open-source project available on GitHub.com: https://github.com/renebigot/iOsReviewTime\n\nCopyright © 2012, RENE BIGOT. All rights reserved. Copyright © 2014, iRare Media. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."; ObjectID = "yZ4-Ne-6NX"; */
-"yZ4-Ne-6NX.text" = "Apple, App Store, iOS et Mac sont des marques déposées d'Apple Inc., enregistrées aux U.S.A. ainsi que dans d'autres pays.\n\nTwitter et Tweet sont des marques déposées de  Twitter Inc. enregistrées aux U.S.A. ainsi que dans d'autres pays.\n\nCe logiciel est développé est distribué sous licence BSD. Il est basé sur le projet iOsReviewTime par René BIGOT\n\nCeci est un projet open-source disponible sur GitHub.com : https://github.com/renebigot/iOsReviewTime\n\nCopyright © 2014, René BIGOT. All rights reserved.\nCopyright © 2014, iRare Media. All rights reserved.\n\n-------\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.";
+"yZ4-Ne-6NX.text" = "Apple, App Store, iOS and Mac are all trademarks of Apple Inc., registered in the U.S. and other countries.\n\nTwitter and Tweet are trademarks of Twitter, Inc. registered in the U.S. and other countries.\n\nThis software is distributed and available under the BSD License. This work is originally based off of the iOsReviewTime project by René BIGOT.\n\nThis is an open-source project available on GitHub.com: https://github.com/renebigot/iOsReviewTime\n\nCopyright © 2012, RENE BIGOT. All rights reserved. Copyright © 2014, iRare Media. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.";
 
 /* Class = "IBUILabel"; text = "Version Information"; ObjectID = "zfH-zJ-pAv"; */
-"zfH-zJ-pAv.text" = "Informations sur la version";
+"zfH-zJ-pAv.text" = "Version Information";
 
 /* Class = "IBUITabBarItem"; title = "Apps"; ObjectID = "Iae-Mp-Y4O"; */
 "2Pm-PW-zIw.title" = "Apps";
 
-/* Class = "IBUITabBarItem"; title = "Review Time"; ObjectID = "8NG-4s-qOn"; */
-"JMy-2H-JPn.title" = "Durée de Revue";
-
-/* Class = "IBUINavigationItem"; title = "Developer Apps"; ObjectID = "vAv-7N-cJT"; */
-"Qct-Ul-AaM.title" = "Apps Developer";
-
-/* Class = "IBUITextField"; placeholder = "Organization Name"; ObjectID = "aX7-0z-wrq"; */
-"eTG-si-OPf.placeholder" = "Nom du développeur";
-
-/* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "KMw-nF-q2h"; */
-"j1t-8n-ka1.title" = "Annuler";
-
-/* Class = "IBUILabel"; text = "Average review time for the last 7 days"; ObjectID = "wqO-15-Ty2"; */
-"kKd-5I-bVT.text" = "Temps de revue moyen pour les 7 derniers jours";
-
-/* Class = "IBUINavigationItem"; title = "iOS Review Time"; ObjectID = "x6X-bQ-yGc"; */
-"lHx-qu-jYH.title" = "Temps de Revue iOS";
-
 /* Class = "IBUILabel"; text = "Type the name of your iOS AppStore development company below. This is used to query the AppStore for all of your apps."; ObjectID = "rGX-he-NtA"; */
-"nui-rj-6YK.text" = "Tapez votre nom ou celui de votre société ci-dessous. Il est utilisé pour interroger l'AppStore pour réccupérer la liste de vos applications";
-
-/* Class = "IBUILabel"; text = "X Days"; ObjectID = "fed-eI-B2N"; */
-"oWD-bF-c69.text" = "X jours";
+"nui-rj-6YK.text" = "Type the name of your iOS AppStore development company below. This is used to query the AppStore for all of your apps.";
 

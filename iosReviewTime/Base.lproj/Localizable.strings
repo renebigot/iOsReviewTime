@@ -1,10 +1,8 @@
-/* 
-  Localizable.strings
+/* Localizable.strings
   iOS Review Time
 
   Created by iRare Media on 12/21/13.
-  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved.
-*/
+  Copyright (c) 2012 René Bigot. Copyright (c) 2013 iRare Media. All rights reserved. */
 
 /* No comment provided by engineer. */
 "%@ days" = "%@ days";
@@ -89,3 +87,4 @@
 
 /* Background Fetch Notification */
 "Current iOS Review Time is %i days." = "Current iOS Review Time is %i days.";
+
